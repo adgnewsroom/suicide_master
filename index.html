@@ -12,6 +12,15 @@ body {
    background-color:#D9D9D9;
 }
 
+h1 {
+  font-size: 4em;
+  font-family: 'Gelasio', serif;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  display: block;
+}
+
 h2 {
   font-family: 'Gelasio', serif;
   text-align: center;
@@ -32,6 +41,13 @@ p {
   margin-bottom: 1em;
   font-family: 'Gelasio', serif;
   font-size: 1.3em;
+}
+
+h4 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3em;
+  color: white;
+  text-align: center;
 }
 
 p:first-of-type:first-letter {
@@ -66,22 +82,81 @@ p:first-of-type:first-letter {
 }
 
 
+.scroll {
+  position: relative;
+  padding-top: 9vh;
+  width: 24px;
+  height: 24px;
+}
+.chevron {
+  position: absolute;
+  width: 28px;
+  height: 8px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+.chevron:before,
+.chevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: #fff;
+}
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+.sticky img{
+  display: flex;
+  width:100vw;
+  filter: blur(5px);
+  filter: brightness(40%);
+  height:auto;
+}
+
+.sticky {
+  display: flex;
+  margin: 0;
+  width:100vw;
+  height:auto;
+  justify-content: center;
+  top: 0;
+  z-index: -1;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
   </style>
   </head>
   <body>
-    <section id=“topper”>
-            <div class=“title”>
-                <img src=“title.jpg>
-                <div class=“deck”>Plastic recyclers in Minh Khai, Vietnam wrestle with the blessings and curses of an empire
-                    built on our trash.</div>
-                <div class=“deck”></br>By Ginny Monk and Yutao Chen</div>
-                <div id=“play-video” class=“film”>PLAY</div>
-                <!-- <small class=“scroll”>SCROLL TO READ</small> -->
-                <div class=“scroll”>
-                  <div class=“chevron”></div>
-                  <div class=“chevron”></div>
-                  <div class=“chevron”></div>
-                  <span class=“text”>Scroll down</span>
+    <section id="topper">
+            <div class="title">
+              <div class="sticky">
+                <img src="title.jpg">
+              </div>
+              <h1>Children in Peril</h1>
+                <h4>The rates of suicides by minors have been on a climb for the past several years in Arkansas.<h4>
+                <div class="deck"></br>By Ginny Monk and Yutao Chen</div>
+                <small class="scroll">SCROLL TO READ</small>
+                <div class="scroll">
+                  <div class="chevron"></div>
+                  <div class="chevron"></div>
+                  <div class="chevron"></div>
+                  <span class="text">Scroll down</span>
                 </div>
             </div>
         </section>
