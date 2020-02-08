@@ -11,6 +11,25 @@
 
     <style>
 
+    .progress-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 200;
+      width: 100%;
+      height: 8px;
+      background: #ccc;
+    }
+
+    /* The progress bar (scroll indicator) */
+    .progress-bar {
+      height: 8px;
+      background: #1E90FF;
+      width: 0%;
+    }
+
+
+
 body {
    background-color:#D9D9D9;
 }
@@ -93,7 +112,66 @@ p:first-of-type:first-letter {
   align-items: center;
   justify-content: center;
   padding-left: 30vw;
+  padding-top: 2vh;
 }
+
+
+#chart {
+  align-items: center;
+  justify-content: center;
+  padding-left: 23vw;
+  padding-bottom: 10vh;
+}
+
+#share {
+  display: inline-block;
+  position: fixed;
+  right: 0;
+  width: 100px;
+  z-index: 150;
+}
+
+/* buttons */
+
+#share a {
+  display: inline-block;
+  margin: 5px;
+  opacity: 0.7;
+}
+
+#share a:hover {
+  opacity: 1;
+}
+
+#share img {
+  display: inline-block;
+  float: left;
+  position: relative;
+  width: 32px;
+  height: 32px;
+  margin: 0px;
+  padding: 0px;
+}
+
+#logo {
+  display: inline-block;
+  float: left;
+  position: relative;
+      flex: 0 0 700px;
+      position:relative;
+      left:50%;
+      transform:translate(-30%, 50%);
+      z-index: 100;
+    }
+
+#logo img {
+  display: inline-block;
+  float: left;
+  position: relative;
+      width: 60%;
+      z-index: 100;
+    }
+
 
 
 .states {
@@ -117,8 +195,6 @@ p:first-of-type:first-letter {
   opacity: 0.8;
   border-radius: 2px;
 }
-
-
 
 .scroll {
   position: relative;
@@ -205,8 +281,20 @@ p:first-of-type:first-letter {
   </style>
   </head>
   <body>
-    <section id="topper">
+    <div class="progress-container">
+      <div class="progress-bar" id="myBar"></div>
+    </div>
 
+    <section id="topper">
+      <div id="logo"><a href="http://www.arkansasonline.com" target="_blank"><img alt="Arkansas Democrat-Gazette" src="https://s3.amazonaws.com/new_videos/year_in_pictures/logo.png" class="center"></a></div>
+
+
+      <div id="share">
+        <a target="_blank" class="twitter" title="Share on Twitter" href="https://twitter.com/intent/tweet?url=https://www.arkansasonline.com/yearinreview/&text=Explore the best stories from the Arkansas Democrat-Gazette newsroom in 2019."><img
+            src="https://s3.amazonaws.com/new_videos/year_in_review/twitter.png" alt="2"></a>
+        <a target="_blank" class="facebook" title="Share on Facebook" href="https://www.facebook.com/share.php?u=https://www.arkansasonline.com/yearinreview/&title=Explore the best stories from the Arkansas Democrat-Gazette newsroom in 2019."><img
+            src="https://s3.amazonaws.com/new_videos/year_in_review/facebook.png"></a>
+      </div>
       <div class="background"></div>
       <div class="foreground">
           <div id="titlecard">
@@ -248,9 +336,11 @@ p:first-of-type:first-letter {
     <p>The reports are incomplete, as shown when comparing the newspaper’s database with federal mortality data. Some coroners didn’t have records for every year requested because their predecessors had taken records home with them when they left office.</p>
 
     <h4 style="text-align:center; padding-top:30px">Suicides by minors, per 100,000 from 2012-17</h4>
-    <p>In Arkansas, 119 children died by suicide from 2012 to 2017, putting the state's rate of suicide by minors at 2.8 per 100,000 people. South Dakota had the highest rate at 5.4 per 100,000, and New Jersey had the lowest at 0.9 per 100,000, according to federal mortality data.</p>
 
     <div id="vis"></div>
+
+    <div id="chart"></div>
+
 
     <p>Federal data show that 119 children died in Arkansas from 2012 to 2017, the most recent year for which data are available. Documents gathered by the newspaper show only 63 reports of suicide.</p>
 
@@ -319,17 +409,7 @@ p:first-of-type:first-letter {
 
 
 
-    <div class ='container-fluid'>
-      <div class='row'>
-        <div id="chart"></div>
-          <div id="vis"></div>
 
-          <div class='header'>
-            <h3>Suicides by minors from 1999 to 2017 in Arkansas and surrounding states</h3>
-            <p>The number of suicides by minors has been increasing for several years nationally, according to federal mortality data. Experts say there are many possible reasons for the rise, but it's impossible to pin down one reason.</p>
-          </div>
-        </div>
-      </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -345,6 +425,21 @@ p:first-of-type:first-letter {
 
 
     <script>
+
+    window.onscroll = function() {
+      myFunction()
+    };
+
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
+
+
+
+
       var glines
       var mouseG
       var tooltip
@@ -464,13 +559,13 @@ p:first-of-type:first-letter {
             .attr("class", "legend")
             .attr("transform", function (d, i) {return "translate(0," + i * 25 + ")"})
 
-            svgLegend.append("rect")
-                    .attr("width", 115)
-                    .attr("height", 185)
-                    .attr("x", -120)
-                    .attr("y", 490)
-                    .style("fill", "black")
-                    .style("opacity", "0.1")
+    svgLegend.append("rect")
+            .attr("width", 115)
+            .attr("height", 185)
+            .attr("x", -120)
+            .attr("y", 490)
+            .style("fill", "black")
+            .style("opacity", "0.1")
 
 
         legend.append("circle")
