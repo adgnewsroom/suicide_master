@@ -86,7 +86,7 @@ function loaded(error, usa, rate) {
       .attr("class", "legendLinear")
       .attr("transform", "translate(80,20)");
 
-    var legendLinear = d3.legend.color()
+    var legendLinear = d3.legendColor()
       .shapeWidth(30)
       .orient('horizontal')
       .scale(linear);
