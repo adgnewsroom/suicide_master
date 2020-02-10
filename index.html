@@ -11,7 +11,7 @@
 
     <style>
 
-    .progress-container {
+    /* .progress-container {
       position: fixed;
       top: 0;
       left: 0;
@@ -21,12 +21,11 @@
       background: #ccc;
     }
 
-    /* The progress bar (scroll indicator) */
-    .progress-bar {
+    /* .progress-bar {
       height: 8px;
       background: #1E90FF;
       width: 0%;
-    }
+    } */
 
 
 
@@ -103,12 +102,12 @@ p:first-of-type:first-letter {
   justify-content: center;
   display: block;
   padding-top: 2vh;
-  padding-left: 12vw;
+  padding-left: 15vw;
 }
 
 
 #chart {
-  padding-bottom: 10vh;
+  padding-bottom: 2vh;
   padding-left: 3vw;
   /* max-height: 90%; */
 }
@@ -147,22 +146,28 @@ p:first-of-type:first-letter {
   display: inline-block;
   float: left;
   position: relative;
-      flex: 0 0 700px;
-      position:relative;
-      left:50%;
-      transform:translate(-30%, 50%);
-      z-index: 100;
+  flex: 0 0 700px;
+  position:relative;
+  left:51%;
+  transform:translate(-30%, 50%);
+  z-index: 100;
     }
 
 #logo img {
   display: inline-block;
   float: left;
   position: relative;
-      width: 60%;
-      z-index: 100;
+  width: 55%;
+  z-index: 100;
     }
 
+#logo a{
+  opacity: 0.7;
+}
 
+#logo a:hover {
+  opacity: 1;
+}
 
 .states {
   stroke: #fff;
@@ -267,13 +272,40 @@ p:first-of-type:first-letter {
   animation: pulse 2s linear alternate infinite;
 }
 
+.subhead {
+  line-height: 0.5;
+  text-align: center;
+  padding-bottom: 3vh;
+}
+.subhead span {
+  display: inline-block;
+  position: relative;
+}
+.subhead span:before,
+.subhead span:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  border-bottom: 1px solid DarkSlateGray;
+  border-top: 1px solid DarkSlateGray;
+  top: 0;
+  width: 250px;
+}
+.subhead span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+.subhead span:after {
+  left: 100%;
+  margin-left: 15px;
+}
 
   </style>
   </head>
   <body>
-    <div class="progress-container">
+    <!-- <div class="progress-container">
       <div class="progress-bar" id="myBar"></div>
-    </div>
+    </div> -->
 
     <section id="topper">
       <div id="logo"><a href="http://www.arkansasonline.com" target="_blank"><img alt="Arkansas Democrat-Gazette" src="https://s3.amazonaws.com/new_videos/year_in_pictures/logo.png" class="center"></a></div>
@@ -304,6 +336,7 @@ p:first-of-type:first-letter {
 
 
 <div class="spacer" style="padding: 8vh"></div>
+<article>
     <P>Kelsey Bell is alive; she’s happy a lot of the time.</p>
 
     <p>The now-19-year-old attempted suicide when she was 13 after years of dealing with depression, anxiety and an eating disorder. She says her recovery has highs and lows, but she’s stable now —
@@ -343,8 +376,12 @@ p:first-of-type:first-letter {
     <p>Throughout the state, efforts to prevent suicides, educate Arkansans and decrease stigmas surrounding mental health are ramping up.</p>
 
     <p>“One suicide is too many suicides,” said Mary Meacham, the chair of education and prevention for the Arkansas chapter of the American Foundation for Suicide Prevention.</p>
+</article>
+    <div class="spacer" style="padding: 8vh"></div>
 
-    <h2>‘Really sad’</h2>
+<article>
+
+    <h2 class="subhead"><span>‘Really sad’</span></h2>
 
     <p>Kelsey was 9 when her mother, Ladeana Bell, first noticed mental health problems in her daughter. Ladeana drove to Kelsey’s elementary school and saw the other children running and playing. Kelsey, though, was lying on the ground, lethargic and trying to take a nap.</p>
 
@@ -387,8 +424,10 @@ p:first-of-type:first-letter {
     <p>In addition to social media, Ladeana said she thinks that the country’s growing political division has damaged the sense of community and decency. She formerly served as the Arkansas chapter’s research chairwoman.</p>
 
     <p>“It’s cattiness,” she said. “There a lot of ‘mean-girl’ behavior.”</p>
+</article>
+    <div class="spacer" style="padding: 8vh"></div>
 
-    <h2>Death classification</h2>
+    <h2 class="subhead"><span>Death classification</span></h2>
 
     <p>Coroners are also more cognizant of the need to classify suicides as such, Lackey said. Lackey is also a deputy coroner in Lonoke County who helped to develop a training on investigating infant deaths for Arkansas coroners.</p>
 
