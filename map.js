@@ -1,5 +1,5 @@
-var width = 800;
-    height = 500;
+var width = 900;
+    height = 700;
 
 var tip = d3.tip()
   .attr('class', 'd3-tip')
@@ -17,8 +17,8 @@ var tip = d3.tip()
 
 
 var svg = d3.select('#vis').append('svg')
-    .attr("width", "100%")
-    .attr("height", "100%")
+    .attr("width", "80%")
+    .attr("height", "80%")
     .attr("viewBox", "20 20 " + width + " " + height)
 
 svg.call(tip);
