@@ -1,5 +1,5 @@
-var width = 900;
-    height = 700;
+var width = 800;
+    height = 500;
 
 var tip = d3.tip()
   .attr('class', 'd3-tip')
