@@ -19,7 +19,7 @@ var tip = d3.tip()
 var svg = d3.select('#vis').append('svg')
     .attr("width", "100%")
     .attr("height", "100%")
-    .attr("viewBox", "20 20 " + 600 + " " + 400)
+    .attr("viewBox", "20 20 " + width + " " + height)
 
 svg.call(tip);
 
