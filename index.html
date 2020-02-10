@@ -56,16 +56,6 @@ body {
   align-items: center;
   justify-content: center;
   height: 103.5vh;
-  background: rgba(0, 0, 0, 0.42);
-  -webkit-animation: fadein 5s;
-  /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 5s;
-  /* Firefox < 16 */
-  -ms-animation: fadein 5s;
-  /* Internet Explorer */
-  -o-animation: fadein 5s;
-  /* Opera < 12.1 */
-  animation: fadein 5s;
 }
 
 h1 {
@@ -111,16 +101,14 @@ p:first-of-type:first-letter {
 #vis {
   align-items: center;
   justify-content: center;
-  padding-left: 30vw;
+  display: block;
   padding-top: 2vh;
 }
 
 
 #chart {
-  align-items: center;
-  justify-content: center;
-  padding-left: 23vw;
   padding-bottom: 10vh;
+  padding-left: 7vw;
 }
 
 #share {
@@ -446,8 +434,8 @@ p:first-of-type:first-letter {
 
       var parseDate = d3.timeParse("%Y")
 
-      var margin = {top: 80, right: 200, bottom: 40, left: 80}
-      var width = 1400 - margin.left - margin.right
+      var margin = {top: 50, right: 50, bottom: 1, left: 50}
+      var width = 1500 - margin.left - margin.right
       var height = 800 - margin.top - margin.bottom
 
       var lineOpacity = 0.8
@@ -482,8 +470,9 @@ p:first-of-type:first-letter {
           .range([height, 0]);
 
         var svg = d3.select("#chart").append("svg")
-          .attr("width", width + margin.left + margin.right)
-          .attr("height", height + margin.top + margin.bottom)
+          .attr("width", "90%")
+          .attr("height", "80%")
+          .attr("viewBox", "40 40 " + width + " " + 850)
           .append('g')
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
