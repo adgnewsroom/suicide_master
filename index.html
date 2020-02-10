@@ -108,7 +108,8 @@ p:first-of-type:first-letter {
 
 #chart {
   padding-bottom: 10vh;
-  padding-left: 7vw;
+  padding-left: 3vw;
+  /* max-height: 90%; */
 }
 
 #share {
@@ -435,7 +436,7 @@ p:first-of-type:first-letter {
       var parseDate = d3.timeParse("%Y")
 
       var margin = {top: 50, right: 50, bottom: 1, left: 50}
-      var width = 1500 - margin.left - margin.right
+      var width = 1600 - margin.left - margin.right
       var height = 800 - margin.top - margin.bottom
 
       var lineOpacity = 0.8
@@ -470,9 +471,9 @@ p:first-of-type:first-letter {
           .range([height, 0]);
 
         var svg = d3.select("#chart").append("svg")
-          .attr("width", "90%")
-          .attr("height", "80%")
-          .attr("viewBox", "40 40 " + width + " " + 850)
+          .attr("width", "100%")
+          .attr("height", "100%")
+          .attr("viewBox", "20 20 " + 1600 + " " + 980)
           .append('g')
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
