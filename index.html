@@ -144,8 +144,6 @@ p:first-of-type:first-letter {
   padding: 0px;
 }
 
-
-
 .col-md-6 a:hover {
   opacity: 1;
 }
@@ -341,6 +339,64 @@ p:first-of-type:first-letter {
 #chart {height: 40%;}
 }
 
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 3em;
+    font-family: 'Gelasio', serif;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 1.3em;
+  }
+
+p {
+  font-size: 1.1em;
+  width:500px;
+  }
+
+  #logo img {
+    width: 50%
+}
+
+#share img {
+  width: 30px;
+  height: auto
+}
+
+.chevron {
+  width: 20px;
+  height: 5px;
+}
+
+.text {
+  font-size: 10px
+}
+}
+
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 576px) {
+
+  h1 {
+    font-size: 2em;
+    font-family: 'Gelasio', serif;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 1.1em;
+  }
+
+p {
+  font-size: 1.0em;
+  width:380px;
+  }
+}
+
+
   </style>
   </head>
   <body>
@@ -363,8 +419,8 @@ p:first-of-type:first-letter {
           <div id="titlecard">
           <h1>Children in Peril</h1>
         </div>
-            <h3>The rates of suicides by minors have been on a climb in Arkansas.<h3>
-            <div class="deck"></br>By Ginny Monk and Yutao Chen</div>
+            <h3>The rates of suicides by minors have been on a climb in Arkansas.</h3>
+            <h3></br>By Ginny Monk and Yutao Chen</h3>
       </div>
 
     <div class="scroll">
@@ -978,9 +1034,9 @@ p:first-of-type:first-letter {
         var documentEl = $(document),
             fadeElem = $('#topper');
 
-
         documentEl.on('scroll', function() {
             var currScrollPos = documentEl.scrollTop();
+
 
             fadeElem.each(function() {
                 var $this = $(this),
@@ -988,7 +1044,6 @@ p:first-of-type:first-letter {
                 if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos-elemOffsetTop)/800);
             });
         });
-
     });
 
     </script>
