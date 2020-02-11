@@ -328,6 +328,19 @@ p:first-of-type:first-letter {
   padding-bottom: 100px;
 }
 
+
+@media (max-width: 992px) {
+  /* #tooltip .div{
+    width: 10%;
+    height: auto;
+    font-size: 5px;
+} */
+
+#vis {height: 40%;}
+
+#chart {height: 40%;}
+}
+
   </style>
   </head>
   <body>
@@ -930,13 +943,13 @@ p:first-of-type:first-letter {
           .style('display', 'block')
           .style('left', d3.event.pageX + 20)
           .style('top', d3.event.pageY - 20)
-          .style('font-size', 11.5)
+          .style('font-size', 10)
           .style('opacity', 0.8)
           .selectAll()
           .data(res_nested1).enter() // for each vehicle category, list out name and price of rate
           .append('div')
           .style('color', "black")
-          .style('font-size', 16)
+          .style('font-size', 15)
           .style('font-weight', "bold")
           .style("font-family", "Roboto")
           .html(d => {
