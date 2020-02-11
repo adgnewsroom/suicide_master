@@ -109,8 +109,8 @@ p:first-of-type:first-letter {
 
 
 #chart {
-  padding-bottom: 2vh;
-  padding-left: 3vw;
+  /* padding-bottom: 1vh; */
+  padding-left: 10vw;
   /* max-height: 90%; */
 }
 
@@ -143,6 +143,17 @@ p:first-of-type:first-letter {
   margin: 0px;
   padding: 0px;
 }
+
+
+
+.col-md-6 a:hover {
+  opacity: 1;
+}
+
+.col-md-6 a {
+  opacity: 0.7;
+}
+
 
 #logo {
   display: inline-block;
@@ -490,20 +501,20 @@ p:first-of-type:first-letter {
         <div class="col-md-6 col-lg-9 text-center text-md-right" style="padding-top:10px">
 
           <!-- Facebook -->
-          <a class="fb-ic">
-<img src="facebook.png" style="width:20px">
+          <a class="fb-ic"><a href="https://www.facebook.com/arkansasonline/" target="_blank">
+<img src="facebook.png" style="width:20px"></a>
           </a>
           <!-- Twitter -->
-          <a class="tw-ic">
-<img src="twitter.png" style="width: 20px;">
+          <a class="tw-ic"><a href="https://twitter.com/arkansasonline" target="_blank">
+<img src="twitter.png" style="width: 20px;"></a>
           </a>
           <!--Instagram-->
-          <a class="ins-ic">
-<img src="instagram.png" style="width: 20px;">
+          <a class="ins-ic"><a href="https://instagram.com/arkansasonline" target="_blank">
+<img src="instagram.png" style="width: 20px;"></a>
           </a>
           <!--Linkedin -->
-          <a class="li-ic">
-<img src="linkedin.png" style="width: 20px;">
+          <a class="li-ic"><a href="https://www.linkedin.com/company/arkansas-democrat-gazette" target="_blank">
+<img src="linkedin.png" style="width: 20px;"></a>
           </a>
 
 
@@ -652,7 +663,7 @@ p:first-of-type:first-letter {
           .range([height, 0]);
 
         var svg = d3.select("#chart").append("svg")
-          .attr("width", "100%")
+          .attr("width", "90%")
           .attr("height", "100%")
           .attr("viewBox", "20 20 " + 1600 + " " + 980)
           .append('g')
