@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Gelasio|Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
 
 
@@ -115,7 +116,7 @@ p:first-of-type:first-letter {
 
 #share {
   display: inline-block;
-  position: fixed;
+  position: absolute;
   right: 0;
   width: 100px;
   z-index: 150;
@@ -301,6 +302,21 @@ p:first-of-type:first-letter {
   margin-left: 15px;
 }
 
+.carousel-cell{
+  width: 80vw;
+  overflow: hidden;
+  padding-right:100px;
+}
+
+.slideshow img {
+  width: 100%;
+}
+
+.slideshow {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
   </style>
   </head>
   <body>
@@ -326,7 +342,6 @@ p:first-of-type:first-letter {
             <h3>The rates of suicides by minors have been on a climb in Arkansas.<h3>
             <div class="deck"></br>By Ginny Monk and Yutao Chen</div>
       </div>
-    </section>
 
     <div class="scroll">
       <div class="chevron"></div>
@@ -334,6 +349,8 @@ p:first-of-type:first-letter {
       <div class="chevron"></div>
       <span class="text">Scroll down</span>
     </div>
+  </section>
+
 
 
 <div class="spacer" style="padding: 8vh"></div>
@@ -399,6 +416,13 @@ p:first-of-type:first-letter {
     <p>Her eating disorder wasn’t getting better, and she says she wasn’t engaging with her therapy. Her depression, she said, manifested itself as anger much of the time.</p>
 
     <p>“It was just things piling up,” Kelsey said. ” … I just knew I didn’t want to be alive anymore.”</p>
+
+    <div class="slideshow">
+        <div class='carousel'>
+            <div class='carousel-cell'><img src="2.jpg"></div>
+            <div class='carousel-cell'><img src="title.jpg"></div>
+        </div>
+    </div>
 
     <p>Those interviewed by the newspaper agreed that it’s nearly impossible to learn the reason for the increase in suicides by children.</p>
 
@@ -578,25 +602,13 @@ p:first-of-type:first-letter {
     <!-- <script src="d3-legend.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="map.js"></script>
 
 
 
     <script>
-
-    window.onscroll = function() {
-      myFunction()
-    };
-
-    function myFunction() {
-      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      var scrolled = (winScroll / height) * 100;
-      document.getElementById("myBar").style.width = scrolled + "%";
-    }
-
-
-
+    var flky = new Flickity( '.carousel', {});
 
       var glines
       var mouseG
@@ -936,6 +948,24 @@ p:first-of-type:first-letter {
       });
     });
 
+
+    $(function() {
+
+        var documentEl = $(document),
+            fadeElem = $('#topper');
+
+
+        documentEl.on('scroll', function() {
+            var currScrollPos = documentEl.scrollTop();
+
+            fadeElem.each(function() {
+                var $this = $(this),
+                    elemOffsetTop = $this.offset().top;
+                if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos-elemOffsetTop)/800);
+            });
+        });
+
+    });
 
     </script>
 
