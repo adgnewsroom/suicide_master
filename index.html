@@ -82,6 +82,12 @@ h3 {
   text-align: center;
 }
 
+h4 {
+  font-size: 1.8em;
+  text-align: center;
+  padding-top: 30px
+}
+
 p {
   max-width: 730px;
   margin: auto;
@@ -110,7 +116,7 @@ p:first-of-type:first-letter {
 
 #chart {
   /* padding-bottom: 1vh; */
-  padding-left: 10vw;
+  padding-left: 3vw;
   /* max-height: 90%; */
 }
 
@@ -358,7 +364,7 @@ p:first-of-type:first-letter {
 
   p {
     font-size: 1.1em;
-    width:500px;
+    width:400px;
   }
 
   #logo img {
@@ -379,9 +385,17 @@ p:first-of-type:first-letter {
   font-size: 10px
   }
 
+#chart .tooltiptext{
+  font-size: 5px
+}
+
 .subhead span:before,
 .subhead span:after {
-  width: 140px;
+  width: 110px;
+}
+
+h4 {
+  font-size: 1.0em;
 }
 }
 
@@ -465,11 +479,11 @@ p {
 
     <p>The reports are incomplete, as shown when comparing the newspaper’s database with federal mortality data. Some coroners didn’t have records for every year requested because their predecessors had taken records home with them when they left office.</p>
 
-    <h4 style="text-align:center; padding-top:30px">Suicides by minors, per 100,000 from 2012 to 2017</h4>
+    <h4>Suicides by minors, per 100,000 from 2012 to 2017</h4>
 
     <div id="vis"></div>
 
-    <h4 style="text-align:center; padding-top:30px">Suicides by minors, per 100,000 from 1999 to 2017</h4>
+    <h4>Suicides by minors, per 100,000 from 1999 to 2017</h4>
 
     <div id="chart"></div>
 
@@ -741,7 +755,7 @@ p {
           .range([height, 0]);
 
         var svg = d3.select("#chart").append("svg")
-          .attr("width", "90%")
+          .attr("width", "100%")
           .attr("height", "100%")
           .attr("viewBox", "20 20 " + 1600 + " " + 980)
           .append('g')
@@ -907,7 +921,7 @@ p {
             .attr('id', 'tooltip')
             .style('position', 'absolute')
             .style("background-color", "white")
-            .style('padding', 6)
+            .style('padding', 4)
             .style('display', 'none')
 
           mouseG = svg.append("g")
@@ -1006,15 +1020,15 @@ p {
 
         tooltip.html(sortingObj[0].date)
           .style('display', 'block')
-          .style('left', d3.event.pageX + 20)
-          .style('top', d3.event.pageY - 20)
-          .style('font-size', 10)
+          .style('left', d3.event.pageX + 10)
+          .style('top', d3.event.pageY)
           .style('opacity', 0.8)
           .selectAll()
           .data(res_nested1).enter() // for each vehicle category, list out name and price of rate
           .append('div')
+          .attr("class", "tooltiptext")
           .style('color', "black")
-          .style('font-size', 15)
+          .style('font-size', 13)
           .style('font-weight', "bold")
           .style("font-family", "Roboto")
           .html(d => {
