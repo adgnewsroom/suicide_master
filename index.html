@@ -334,6 +334,12 @@ p:first-of-type:first-letter {
 
 
 @media (max-width: 992px) {
+
+  body {
+    overflow: hidden;
+    overflow-y:scroll;
+  }
+
   .subhead span:before,
   .subhead span:after {
     width: 140px;
@@ -1029,8 +1035,8 @@ p {
 
         tooltip.html(sortingObj[0].date)
           .style('display', 'block')
-          .style('left', d3.event.pageX + 10)
-          .style('top', d3.event.pageY)
+          .style('left', d3.event.pageX - 50)
+          .style('top', d3.event.pageY - 150)
           .style('opacity', 0.8)
           .selectAll()
           .data(res_nested1).enter() // for each vehicle category, list out name and price of rate
@@ -1038,7 +1044,7 @@ p {
           .attr("class", "tooltiptext")
           .style('color', "black")
           .style('font-size', 13)
-          .style('font-weight', "bold")
+          // .style('font-weight', "bold")
           .style("font-family", "Roboto")
           .html(d => {
             var xDate = xScale.invert(mouse[0])
