@@ -23,9 +23,9 @@ function bubbleChart() {
 
   // X locations of the year titles.
   var agesTitleX = {
-    "0-5": 260,
-    "6-11": width - 490,
-    "12-18": width - 310,
+    "0-5": 230,
+    "6-11": width - 450,
+    "12-18": width - 280,
   };
 
 
@@ -44,11 +44,11 @@ function bubbleChart() {
 
   // X locations of the year titles.
   var yearsTitleX = {
-    2012: 80,
-    2013: width - 700,
-    2014: width - 530,
-    2015: width - 380,
-    2016: width - 230,
+    2012: 50,
+    2013: width - 600,
+    2014: width - 460,
+    2015: width - 340,
+    2016: width - 200,
     2017: width - 80
   };
 
@@ -67,7 +67,7 @@ function bubbleChart() {
     "Gunshot": width - 660,
     "Overdose": width - 480,
     "Fire": width - 300,
-    "Vehicle_Crash": width - 150
+    "Vehicle Crash": width - 150
   };
 
 
