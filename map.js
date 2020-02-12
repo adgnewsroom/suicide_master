@@ -85,7 +85,10 @@ function loaded(error, usa, rate) {
 
     svg.append("g")
       .attr("class", "legendLinear")
-      .attr("transform", "translate(80,20)");
+      .attr("transform", "translate(80,20)")
+      .attr("stroke", "black")
+      .attr("stroke-width", 0.5);
+
 
     var legendLinear = d3.legendColor()
       .shapeWidth(30)
