@@ -28,12 +28,14 @@
       width: 0%;
     } */
 
-
-
 body {
-   background-color:#D9D9D9;
-   overflow: hidden;
-   overflow-y:scroll;
+ background-color:#D9D9D9;
+ overflow-x:hidden;
+ overflow-y:scroll;
+}
+
+.wrapper {
+  overflow-x:hidden;
 }
 
 .background {
@@ -131,9 +133,9 @@ p:first-of-type:first-letter {
 #share {
   display: inline-block;
   position: absolute;
-  top: 8;
-  right: 2;
-  width: 90px;
+  top: 5;
+  right: 1;
+  width: 80px;
   z-index: 150;
 }
 
@@ -456,10 +458,7 @@ p {
   </style>
   </head>
   <body>
-    <!-- <div class="progress-container">
-      <div class="progress-bar" id="myBar"></div>
-    </div> -->
-
+<div class="wrapper">
     <section id="topper">
       <div id="logo"><a href="http://www.arkansasonline.com" target="_blank"><img alt="Arkansas Democrat-Gazette" src="https://s3.amazonaws.com/new_videos/year_in_pictures/logo.png" class="center"></a></div>
 
@@ -727,6 +726,8 @@ p {
   <!-- Copyright -->
 
 </footer>
+
+</div>
 <!-- Footer -->
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
