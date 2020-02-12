@@ -21,93 +21,134 @@ body {
  overflow-y:scroll;
 }
 
-.container {
-  max-width: 900px;
+/* .container {
+  max-width: 800px;
   margin: auto;
+} */
+
+.bubble_intro p{
+  font-family: 'Roboto', sans-serif;
 }
 
 .button {
-  min-width: 130px;
-  padding: 4px 5px;
+  font-family: 'Roboto', sans-serif;
+  min-width: 100px;
+  padding: 4px 10px;
   cursor: pointer;
   text-align: center;
-  font-size: 13px;
+  font-size: 18px;
   border: 1px solid #e0e0e0;
   text-decoration: none;
+
+  color: #444; /* rgba not supported (IE 8) */
+  color: rgba(0, 0, 0, 0.80); /* rgba supported */
+  border: 1px solid #999;  /*IE 6/7/8*/
+  border: none rgba(0, 0, 0, 0);  /*IE9 + everything else*/
+  background-color: #bdbdbd;
+  text-decoration: none;
+  border-radius: 2px;
 }
 
 .button.active {
-  background: #000;
+  background: dimgrey;
   color: #fff;
 }
 
-
 #bubble {
-  width: 940px;
-  height: 600px;
+  max-width: 80%;
+  height: 300px;
   clear: both;
   margin-bottom: 10px;
 }
 
-#toolbar {
-  margin-top: 10px;
-}
 
-.year {
-  font-size: 18px;
-  fill: #aaa;
-  cursor: default;
-}
+  #toolbar {
+    padding-left: 3vw;
+    margin: auto;
+    width: 80%;
+  }
 
-.age {
-  font-size: 18px;
-  fill: #aaa;
-  cursor: default;
-}
+    .year {
+      font-size: 20px;
+      fill: #aaa;
+      padding: 3px;
+      background-color: black;
+      border-radius: 5px;
+      cursor: default;
+    }
 
-.tooltip {
-	position: absolute;
-	top: 100px;
-	left: 100px;
-  -moz-border-radius:5px;
-	border-radius: 5px;
-  border: 2px solid #000;
-  background: #fff;
-	opacity: .9;
-  color: black;
-	padding: 10px;
-	width: 400px;
-	font-size: 12px;
-	z-index: 10;
-}
+    .age_range {
+      background-color: black;
+      border-radius: 5px;
+      padding: 3px;
+      font-size: 20px;
+      fill: #aaa;
+      cursor: default;
+    }
 
-.tooltip .title {
-	font-size: 13px;
-}
+    .manner {
+      background-color: black;
+      border-radius: 5px;
+      padding: 3px;
+      font-size: 18px;
+      fill: #aaa;
+      cursor: default;
+    }
 
-.tooltip .category {
-  font-size: 15px;
-  font-weight: bold;
-}
+    hr.divider {
+    margin: 0.3em;
+    border-width: 0.8px;
+  }
 
-.tooltip .name {
-  font-size: 20px;
-  font-family: 'Gelasio', serif;
-  font-weight: bold;
-  color: dimgrey
-}
+  .tooltip {
+  	position: absolute;
+  	top: 100px;
+  	left: 100px;
+    -moz-border-radius:5px;
+  	border-radius: 4px;
+    border: 1px solid #2F4F4F;
+    background: BlanchedAlmond;
+  	opacity: 0.8;
+    /* color: black; */
+  	padding: 8px;
+  	max-width: 190px;
+  	/* font-size: 12px; */
+  	z-index: 10;
+  }
 
-.tooltip .dob {
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
-  font-weight: bold;
-}
+  .tooltip .title {
+  	font-size: 13px;
+  }
 
-.tooltip .value {
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
-  font-weight: bold;
-}
+  .tooltip .category {
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .tooltip .name {
+    font-size: 19px;
+    line-height: 35px;
+    font-family: 'Gelasio', serif;
+    background-color: #2F4F4F;
+    padding: 1px 4px;
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+  }
+
+  .tooltip .dob {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .tooltip .value {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+  }
 
 
 .wrapper {
@@ -181,6 +222,21 @@ p {
   margin-bottom: 1em;
   font-family: 'Gelasio', serif;
   font-size: 1.3em;
+}
+
+
+.bubble_intro p1 {
+  width: 600px;
+  margin: auto;
+  padding: 0 15px;
+  margin-bottom: 1em;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1em;
+  background-color: rgb(245, 245, 220);
+  border-radius: 5px;
+  padding: 20px;
+  display: block;
+
 }
 
 p:first-of-type:first-letter {
@@ -568,7 +624,7 @@ p {
 
 
 
-<div class="spacer" style="padding: 8vh"></div>
+<div class="spacer" style="padding: 7vh"></div>
 <article>
     <P>Kelsey Bell is alive; she’s happy a lot of the time.</p>
 
@@ -579,17 +635,6 @@ p {
 
     <p>The rates of suicides by minors have been on a climb for the past several years. In Arkansas, they’ve increased from 10 in 2010 to 27 in 2017, according to federal mortality data from the Centers for Disease Control and Prevention.</p>
 
-    <p>Beginning in September 2018, the Arkansas Democrat-Gazette began gathering prosecutorial files, coroners’ reports, archived news articles, Department of Human Services records and police reports on the deaths of children in every county in Arkansas from 2012 to 2017.</p>
-
-    <p>The newspaper then created a database of those deaths to analyze the cause, manner and circumstances surrounding each death. The findings showed that children in almost every county in the state died by suicide over that time span.</p>
-
-    <p>The oldest was just a few months away from his 18th birthday, and the youngest was about to turn 6. All but 13 were by teenagers.</p>
-
-    <p>Twenty-one of the suicides examined by the newspaper were by girls, and 42 — about 66% — were by boys.</p>
-
-    <p>Some reports listed histories of mental health problems or major life changes such as a breakup, death in the family or a sudden move. Others listed no such history.</p>
-
-    <p>The reports are incomplete, as shown when comparing the newspaper’s database with federal mortality data. Some coroners didn’t have records for every year requested because their predecessors had taken records home with them when they left office.</p>
 
     <div class="container">
       <h4>Child suicides in Arkansas from 2012 to 2017</h4>
@@ -620,20 +665,23 @@ p {
       </div>
       <div id="bubble"></div>
 
-      <!-- <div class="footer">
-        <p>A demonstration of animated bubble charts in JavaScript and D3.js</p>
-        <strong>This version of the code uses D3v4!</strong>
-        <p><a href="http://vallandingham.me/bubble_charts_with_d3v4.html">Blog Post</a> | <a href="https://github.com/vlandham/bubble_chart_v4">Code</a></p>
-      </div> -->
+      <div class="bubble_intro">
+
+      <p1>Beginning in September 2018, the Arkansas Democrat-Gazette began gathering prosecutorial files, coroners’ reports, archived news articles, Department of Human Services records and police reports on the deaths of children in every county in Arkansas from 2012 to 2017.
+
+      <br><br>The newspaper then created a database of those deaths to analyze the cause, manner and circumstances surrounding each death. The findings showed that children in almost every county in the state died by suicide over that time span.
+
+      <br><br>The oldest was just a few months away from his 18th birthday, and the youngest was about to turn 6. All but 13 were by teenagers.
+
+      <br><br>Twenty-one of the suicides examined by the newspaper were by girls, and 42 — about 66% — were by boys.
+
+      <br><br>Some reports listed histories of mental health problems or major life changes such as a breakup, death in the family or a sudden move. Others listed no such history.
+
+      <br><br>The reports are incomplete, as shown when comparing the newspaper’s database with federal mortality data. Some coroners didn’t have records for every year requested because their predecessors had taken records home with them when they left office.</p1 >
+</div>
+<div class="spacer" style="padding: 7vh"></div>
+
     </div>
-
-    <h4>Suicides by minors, per 100,000 from 2012 to 2017</h4>
-
-    <div id="vis"></div>
-
-    <h4>Suicides by minors, per 100,000 from 1999 to 2017</h4>
-
-    <div id="chart"></div>
 
 
     <p>Federal data show that 119 children died in Arkansas from 2012 to 2017, the most recent year for which data are available. Documents gathered by the newspaper show only 63 reports of suicide.</p>
@@ -645,8 +693,17 @@ p {
     <p>Throughout the state, efforts to prevent suicides, educate Arkansans and decrease stigmas surrounding mental health are ramping up.</p>
 
     <p>“One suicide is too many suicides,” said Mary Meacham, the chair of education and prevention for the Arkansas chapter of the American Foundation for Suicide Prevention.</p>
+
+    <h4>Suicides by minors, per 100,000 from 2012 to 2017</h4>
+
+    <div id="vis"></div>
+
+    <h4>Suicides by minors, per 100,000 from 1999 to 2017</h4>
+
+    <div id="chart"></div>
+
 </article>
-    <div class="spacer" style="padding: 8vh"></div>
+    <div class="spacer" style="padding: 7vh"></div>
 
 <article>
 
@@ -703,7 +760,7 @@ p {
 
 </article>
 
-    <div class="spacer" style="padding: 8vh"></div>
+    <div class="spacer" style="padding: 7vh"></div>
 
 <article>
 
@@ -719,7 +776,7 @@ p {
 
   </article>
 
-  <div class="spacer" style="padding: 8vh"></div>
+  <div class="spacer" style="padding: 7vh"></div>
 
 
   <!-- Footer -->
