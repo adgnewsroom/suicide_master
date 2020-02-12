@@ -7,32 +7,108 @@
     <link href="https://fonts.googleapis.com/css?family=Gelasio|Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <!-- <link rel="stylesheet" href="bubble_chart.css"> -->
+    <!-- <link rel="stylesheet" href="reset.css"> -->
+
 
 
 
     <style>
-
-    /* .progress-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 200;
-      width: 100%;
-      height: 8px;
-      background: #ccc;
-    }
-
-    /* .progress-bar {
-      height: 8px;
-      background: #1E90FF;
-      width: 0%;
-    } */
 
 body {
  background-color:#D9D9D9;
  overflow-x:hidden;
  overflow-y:scroll;
 }
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.button {
+  min-width: 130px;
+  padding: 4px 5px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 13px;
+  border: 1px solid #e0e0e0;
+  text-decoration: none;
+}
+
+.button.active {
+  background: #000;
+  color: #fff;
+}
+
+
+#bubble {
+  width: 940px;
+  height: 600px;
+  clear: both;
+  margin-bottom: 10px;
+}
+
+#toolbar {
+  margin-top: 10px;
+}
+
+.year {
+  font-size: 18px;
+  fill: #aaa;
+  cursor: default;
+}
+
+.age {
+  font-size: 18px;
+  fill: #aaa;
+  cursor: default;
+}
+
+.tooltip {
+	position: absolute;
+	top: 100px;
+	left: 100px;
+  -moz-border-radius:5px;
+	border-radius: 5px;
+  border: 2px solid #000;
+  background: #fff;
+	opacity: .9;
+  color: black;
+	padding: 10px;
+	width: 400px;
+	font-size: 12px;
+	z-index: 10;
+}
+
+.tooltip .title {
+	font-size: 13px;
+}
+
+.tooltip .category {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.tooltip .name {
+  font-size: 20px;
+  font-family: 'Gelasio', serif;
+  font-weight: bold;
+  color: dimgrey
+}
+
+.tooltip .dob {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.tooltip .value {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+}
+
 
 .wrapper {
   overflow-x:hidden;
@@ -515,6 +591,42 @@ p {
 
     <p>The reports are incomplete, as shown when comparing the newspaper’s database with federal mortality data. Some coroners didn’t have records for every year requested because their predecessors had taken records home with them when they left office.</p>
 
+    <div class="container">
+      <h1>Child gun deaths in Arkansas from 2012 to 2017</h1>
+      <div id="toolbar">
+        <a href="#" id="all" class="button active">All deaths</a>
+        <a href="#" id="manner" class="button">By manner</a>
+        <a href="#" id="year" class="button">By year</a>
+        <a href="#" id="age_range" class="button">By age</a>
+
+        <svg class="legend" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        	 viewBox="0 0 50 33" style="enable-background:new 0 0 50 33; width: 80px; transform: translate(450px, -20px);" xml:space="preserve">
+        <style type="text/css">
+        	.st0{fill:#1E90FF;}
+        	.st1{fill:#F08080;}
+        	.st2{font-family:'ArialMT';}
+        	.st3{font-size:10px;}
+        </style>
+        <g>
+        	<rect x="4" y="5" class="st0" width="9" height="9"/>
+        </g>
+        <g>
+        	<rect x="4" y="19" class="st1" width="9" height="9"/>
+        </g>
+        <text transform="matrix(1 0 0 1 15.9678 12.7139)" class="st2 st3">Male</text>
+        <text transform="matrix(1 0 0 1 15.9678 27.7139)" class="st2 st3">Female</text>
+        </svg>
+
+      </div>
+      <div id="bubble"></div>
+
+      <!-- <div class="footer">
+        <p>A demonstration of animated bubble charts in JavaScript and D3.js</p>
+        <strong>This version of the code uses D3v4!</strong>
+        <p><a href="http://vallandingham.me/bubble_charts_with_d3v4.html">Blog Post</a> | <a href="https://github.com/vlandham/bubble_chart_v4">Code</a></p>
+      </div> -->
+    </div>
+
     <h4>Suicides by minors, per 100,000 from 2012 to 2017</h4>
 
     <div id="vis"></div>
@@ -745,6 +857,8 @@ p {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="map.js"></script>
+    <script src="bubble.js"></script>
+
 
 
 
