@@ -30,7 +30,7 @@ var projection = d3.geoAlbersUsa()
 var path = d3.geoPath()
     .projection(projection);
 
-var colorScale = d3.scaleLinear().range(["#fee5d9", "#a50f15"]).interpolate(d3.interpolateLab);
+var colorScale = d3.scaleLinear().range(["#f7f7f7", "#252525"]).interpolate(d3.interpolateLab);
 
 var countryById = d3.map();
 
