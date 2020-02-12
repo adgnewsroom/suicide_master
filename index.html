@@ -32,9 +32,9 @@
 
 body {
    background-color:#D9D9D9;
+   overflow: hidden;
+   overflow-y:scroll;
 }
-
-
 
 .background {
   background-image: url("title.jpg");
@@ -79,11 +79,19 @@ h3 {
   font-family: 'Roboto', sans-serif;
   font-size: 1.6em;
   color: white;
-  text-align: center;
+  text-align: left;
+  max-width: 80vw;
 }
 
 h4 {
   font-size: 1.8em;
+  text-align: center;
+  padding-top: 30px
+}
+
+h5 {
+  font-size: 1.5em;
+  color: white;
   text-align: center;
   padding-top: 30px
 }
@@ -123,8 +131,9 @@ p:first-of-type:first-letter {
 #share {
   display: inline-block;
   position: absolute;
-  right: 0;
-  width: 100px;
+  top: 8;
+  right: 2;
+  width: 90px;
   z-index: 150;
 }
 
@@ -144,8 +153,8 @@ p:first-of-type:first-letter {
   display: inline-block;
   float: left;
   position: relative;
-  width: 32px;
-  height: 32px;
+  width: 25px;
+  height: 25px;
   margin: 0px;
   padding: 0px;
 }
@@ -335,11 +344,6 @@ p:first-of-type:first-letter {
 
 @media (max-width: 992px) {
 
-  body {
-    overflow: hidden;
-    overflow-y:scroll;
-  }
-
   .subhead span:before,
   .subhead span:after {
     width: 140px;
@@ -402,6 +406,16 @@ p:first-of-type:first-letter {
 h4 {
   font-size: 1.0em;
 }
+
+h5 {
+  font-size: 1.0em;
+}
+
+#share img {
+  width: 18px;
+  height: 18px;
+}
+
 }
 
 
@@ -432,6 +446,10 @@ p {
     font-size: 0.9em;
   }
 
+  h5 {
+    font-size: 0.8em;
+  }
+
 }
 
 
@@ -448,9 +466,9 @@ p {
 
       <div id="share">
         <a target="_blank" class="twitter" title="Share on Twitter" href="https://twitter.com/intent/tweet?url=https://www.arkansasonline.com/yearinreview/&text=Explore the best stories from the Arkansas Democrat-Gazette newsroom in 2019."><img
-            src="https://s3.amazonaws.com/new_videos/year_in_review/twitter.png" alt="2"></a>
+            src="twitter.png" alt="2"></a>
         <a target="_blank" class="facebook" title="Share on Facebook" href="https://www.facebook.com/share.php?u=https://www.arkansasonline.com/yearinreview/&title=Explore the best stories from the Arkansas Democrat-Gazette newsroom in 2019."><img
-            src="https://s3.amazonaws.com/new_videos/year_in_review/facebook.png"></a>
+            src="facebook.png"></a>
       </div>
       <div class="background"></div>
       <div class="foreground">
@@ -458,7 +476,7 @@ p {
           <h1>Children in Peril</h1>
         </div>
             <h3>The rates of suicides by minors have been on a climb in Arkansas.</h3>
-            <h3></br>By Ginny Monk and Yutao Chen</h3>
+            <h5>By Ginny Monk and Yutao Chen</h5>
       </div>
 
     <div class="scroll">
@@ -1035,15 +1053,15 @@ p {
 
         tooltip.html(sortingObj[0].date)
           .style('display', 'block')
-          .style('left', d3.event.pageX - 50)
-          .style('top', d3.event.pageY - 150)
+          .style('left', d3.event.pageX - 110)
+          .style('top', d3.event.pageY + 20)
           .style('opacity', 0.8)
           .selectAll()
           .data(res_nested1).enter() // for each vehicle category, list out name and price of rate
           .append('div')
           .attr("class", "tooltiptext")
           .style('color', "black")
-          .style('font-size', 13)
+          .style('font-size', 14)
           // .style('font-weight', "bold")
           .style("font-family", "Roboto")
           .html(d => {
