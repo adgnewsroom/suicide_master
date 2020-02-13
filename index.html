@@ -48,12 +48,11 @@ body {
   color: #fff;
 }
 
-#bubble {
+#bubble svg{
   max-width: 80%;
   height: 300px;
   clear: both;
   margin-bottom: 10px;
-  padding-left: 5vw;
 }
 
 
@@ -1423,7 +1422,7 @@ p {
         // working with data.
         var myNodes = rawData.map(function (d) {
           return {
-            radius: (9),
+            radius: (8),
             name: d.name,
             manner: d.manner,
             // group: d.group,
@@ -1463,13 +1462,16 @@ p {
         // convert raw data into nodes data
         nodes = createNodes(rawData);
 
+
+        // var svg = d3.select('#vis').append('svg')
+
         // Create a SVG element inside the provided selector
         // with desired size.
         svg = d3.select(selector)
           .append('svg')
-          .attr('width', "200%")
-          .attr('height', "200%")
-          // .attr("viewBox", "20 20 " + width + " " + height);
+          .attr('width', "100%")
+          .attr('height', "100%")
+          // .attr('viewBox', "200 20 300 300");
 
         // Bind nodes data to what will become DOM elements to represent them.
         bubbles = svg.selectAll('.bubble')
