@@ -18,10 +18,10 @@ body {
  overflow-y:scroll;
 }
 
-/* .container {
-  max-width: 800px;
-  margin: auto;
-} */
+.container1 {
+padding-top: 5vh;
+padding-bottom: 5vh;
+}
 
 
 .button {
@@ -51,6 +51,7 @@ body {
   max-width: 80%;
   height: 300px;
   clear: both;
+  /* padding-top: 5vh; */
   margin-bottom: 10px;
 }
 
@@ -180,9 +181,11 @@ h1 {
 }
 
 h2 {
-  font-family: 'Gelasio', serif;
+  font-family: 'Roboto', sans-serif;
   text-align: center;
   font-weight: bold;
+  font-size: 1.8em;
+
 }
 
 
@@ -412,7 +415,7 @@ p:first-of-type:first-letter {
 .subhead {
   line-height: 0.5;
   text-align: center;
-  padding-bottom: 3vh;
+  padding-bottom: 8vh;
 }
 .subhead span {
   display: inline-block;
@@ -423,10 +426,10 @@ p:first-of-type:first-letter {
   content: "";
   position: absolute;
   height: 5px;
-  border-bottom: 1px solid DarkSlateGray;
-  border-top: 1px solid DarkSlateGray;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
   top: 0;
-  width: 250px;
+  width: 150px;
 }
 .subhead span:before {
   right: 100%;
@@ -601,8 +604,9 @@ p {
 
 
 
-<div class="spacer" style="padding: 7vh"></div>
-<article data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="1000">
+<div class="spacer" style="padding: 8vh"></div>
+<div class="animation" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="1000">
+<article>
     <P>Kelsey Bell is alive; she’s happy a lot of the time.</p>
 
     <p>The now-19-year-old attempted suicide when she was 13 after years of dealing with depression, anxiety and an eating disorder. She says her recovery has highs and lows, but she’s stable now —
@@ -620,7 +624,9 @@ p {
 
     <p>Twenty-one of the suicides examined by the newspaper were by girls, and 42 — about 66% — were by boys.</p>
 
-    <div class="container">
+</div>
+
+    <div class="container1">
       <h4>Child suicides in Arkansas from 2012 to 2017</h4>
       <div id="toolbar">
         <a id="all" class="button active">All deaths</a>
@@ -679,7 +685,7 @@ p {
 
 <article>
 
-    <h2 class="subhead"><span>‘Really sad’</span></h2>
+    <h2 class="subhead" data-aos="zoom-out" data-aos-anchor-placement="top-center" data-aos-duration="500" data-aos-once="true"><span>"Really sad"</span></h2>
 
     <p>Kelsey was 9 when her mother, Ladeana Bell, first noticed mental health problems in her daughter. Ladeana drove to Kelsey’s elementary school and saw the other children running and playing. Kelsey, though, was lying on the ground, lethargic and trying to take a nap.</p>
 
@@ -732,11 +738,11 @@ p {
 
 </article>
 
-    <div class="spacer" style="padding: 7vh"></div>
+    <div class="spacer" style="padding: 10vh"></div>
 
 <article>
 
-    <h2 class="subhead"><span>Death classification</span></h2>
+    <h2 class="subhead" data-aos="zoom-out" data-aos-anchor-placement="top-center" data-aos-duration="500"  data-aos-once="true"><span>Death classification</span></h2>
 
     <p>Coroners are also more cognizant of the need to classify suicides as such, Lackey said. Lackey is also a deputy coroner in Lonoke County who helped to develop a training on investigating infant deaths for Arkansas coroners.</p>
 
@@ -758,13 +764,12 @@ p {
 
   </article>
 
-  <div class="spacer" style="padding: 7vh"></div>
+  <div class="spacer" style="padding: 10vh"></div>
 
 
   <article>
 
-  <h2 class="subhead"><span>"We all want the same outcome"</span></h2>
-
+  <h2 class="subhead" data-aos="zoom-out" data-aos-anchor-placement="top-center" data-aos-duration="500" data-aos-once="true"><span>"We all want the same outcome"</span></h2>
 
   <p>Reducing stigma is one of a few goals for Arkansas Students United for Mental Health, a cohort of high schoolers from Cabot High School. They aren’t an official school club and are extending their member base outside of their school district.</p>
 
@@ -801,7 +806,7 @@ p {
 
 
 
-  <div class="spacer" style="padding: 7vh"></div>
+  <div class="spacer" style="padding: 10vh"></div>
 
 
   <!-- Footer -->
@@ -820,7 +825,7 @@ p {
         <!-- <h6 class="text-uppercase font-weight-bold">Company name</h6> -->
         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
         <a href="http://www.arkansasonline.com" target="_blank"><img alt="Arkansas Democrat-Gazette" src="https://s3.amazonaws.com/new_videos/year_in_pictures/logo.png" class="center" style="width: 100%"></a>
-        <div class="col-md-6 col-lg-9 text-center text-md-right" style="padding-top:10px">
+        <div class="col-md-6 col-lg-9 text-center text-md-right">
 
           <!-- Facebook -->
           <a class="fb-ic"><a href="https://www.facebook.com/arkansasonline/" target="_blank">
