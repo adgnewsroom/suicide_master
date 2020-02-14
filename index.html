@@ -7,6 +7,8 @@
     <link href="https://fonts.googleapis.com/css?family=Gelasio|Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 
     <style>
 
@@ -21,9 +23,6 @@ body {
   margin: auto;
 } */
 
-.bubble_intro p{
-  font-family: 'Roboto', sans-serif;
-}
 
 .button {
   font-family: 'Roboto', sans-serif;
@@ -215,21 +214,6 @@ p {
   margin-bottom: 1em;
   font-family: 'Gelasio', serif;
   font-size: 1.3em;
-}
-
-
-.bubble_intro p1 {
-  width: 600px;
-  margin: auto;
-  padding: 0 15px;
-  margin-bottom: 1em;
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.1em;
-  background-color: rgb(245, 245, 220);
-  border-radius: 5px;
-  padding: 20px;
-  display: block;
-
 }
 
 p:first-of-type:first-letter {
@@ -618,7 +602,7 @@ p {
 
 
 <div class="spacer" style="padding: 7vh"></div>
-<article>
+<article data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="1000">
     <P>Kelsey Bell is alive; she’s happy a lot of the time.</p>
 
     <p>The now-19-year-old attempted suicide when she was 13 after years of dealing with depression, anxiety and an eating disorder. She says her recovery has highs and lows, but she’s stable now —
@@ -686,9 +670,9 @@ p {
 
     <div id="vis"></div>
 
-    <h4>Suicides by minors, per 100,000 from 1999 to 2017</h4>
+    <!-- <h4>Suicides by minors, per 100,000 from 1999 to 2017</h4>
 
-    <div id="chart"></div>
+    <div id="chart"></div> -->
 
 </article>
     <div class="spacer" style="padding: 7vh"></div>
@@ -762,7 +746,60 @@ p {
 
     <p>There are no training requirements for coroners in Arkansas, but Lackey said in recent years there have been more efforts to train coroners on suicides, overdoses and infant deaths.</p>
 
+    <p>For example, Lackey said, suicides completed by hospice patients weren’t examined very closely before the voluntary training for coroners became more widespread. Some that likely should have been ruled suicides were ruled accidental or natural.</p>
+
+    <p>“Suicides are no longer being called ‘unintentional hanging’ or ‘unintentional drug overdose,’” Mullins said. “They’re now actually being called ‘suicides,’ which I think is a good thing because we can’t prevent something if we don’t know it’s happening.”</p>
+
+    <p>Particularly in small towns where the coroners know the family members of the people they’re visiting, it can be difficult to tell them their loved one died by suicide, Lackey said.</p>
+
+    <p>Ladeana said while she thinks the stigmas surrounding suicide and mental illness are getting better, they still exist and may have a bearing on.</p>
+
+    <p>“It’s very easy for someone to code it [suicide] differently,” she said ” … There’s still a shame to it, especially in the South, especially in the Bible Belt. I think we’re talking about it more, but that stigma is still there.”</p>
+
   </article>
+
+  <div class="spacer" style="padding: 7vh"></div>
+
+
+  <article>
+
+  <h2 class="subhead"><span>"We all want the same outcome"</span></h2>
+
+
+  <p>Reducing stigma is one of a few goals for Arkansas Students United for Mental Health, a cohort of high schoolers from Cabot High School. They aren’t an official school club and are extending their member base outside of their school district.</p>
+
+  <p>The group sprung up from an advanced placement government class assignment and grew from there, said Cabot senior Jayson Crumpler, a founding member and the group’s head.</p>
+
+  <p>They plan to implement “localized educational programs” to teach other students about mental health and the available resources. They’re also advocating for legislation that would lower the age of consent for mental health issues from 18 to 16 and set aside funding for an on-campus therapist at every high school campus in the state.</p>
+
+  <p>“I think we’ve succeeded in at least bringing the conversation to the table,” Crumpler said.</p>
+
+  <p>Crumpler is working with Lackey and others at the Arkansas chapter of the National Alliance on Mental Illness on his project. The alliance is also pushing out fresh efforts to decrease suicides and inform the public on mental illness.</p>
+
+  <p>The group launched a HelpLine — independent of the suicide prevention hotline — that Arkansans can call with questions about support groups, how to access mental health care and information about mental illness. The HelpLine number is (800) 844-0381.</p>
+
+  <p>Three alliance members attended a two-day suicide prevention training in Fort Smith called Applied Suicide Intervention Skills Training. Arkansas Children’s Hospital works with members of the Arkansas chapter of the American Foundation for Suicide Prevention to provide trainings.</p>
+
+  <p>The trainings cover how to spot signs of suicide — things such as changes in behavior, loss of interest in activities or social interactions, and discussion about killing themselves. They also cover debunked myths about suicide — that asking about suicide can “plant the idea” in someone’s mind, that the attempt was “attention -seeking and should be ignored, or that suicide can’t be prevented, for example.</p>
+
+  <p>“It’s a cry for attention,” Meacham said. “We better give it to them.”</p>
+
+  <p>They range from a couple of hours to two days. Some are open to the public, while others are customized to certain group such as faith-based leaders or students, Meacham said.</p>
+
+  <p>The foundation will soon push out a training for the workplace environment that can be accomplished over a lunch hour and a training tailored toward caretakers.</p>
+
+  <p>The Arkansas Department of Health, which operates the in-state suicide prevention hotline, also runs trainings on suicide prevention, said Mandy Thomas, the department’s section chief for injury violence and prevention.</p>
+
+  <p>She said in recent years, the different groups have found more ways to work together.</p>
+
+  <p>“We all want the same outcome, which is to reduce the suicides,” Thomas said.</p>
+
+</article>
+
+
+
+
+
 
   <div class="spacer" style="padding: 7vh"></div>
 
@@ -901,7 +938,10 @@ p {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="map.js"></script>
+    <!-- <script src="linechart.js"></script> -->
+
     <!-- <script src="bubble.js"></script> -->
 
 
@@ -910,333 +950,9 @@ p {
     <script>
     var flky = new Flickity( '.carousel', {});
 
-      var glines
-      var mouseG
-      var tooltip
+    AOS.init();
 
-      var parseDate = d3.timeParse("%Y")
 
-      var margin = {top: 50, right: 50, bottom: 1, left: 50}
-      var width = 1600 - margin.left - margin.right
-      var height = 800 - margin.top - margin.bottom
-
-      var lineOpacity = 1
-      var lineStroke = "4px"
-
-      var axisPad = 7 // axis formatting
-      var R = 6 //legend marker
-
-      var category = ["Arkansas", "Texas", "Tennessee", "Oklahoma", "Missouri", "Mississippi", "Louisiana"]
-
-      var color = d3.scaleOrdinal()
-        .domain(category)
-        .range(["#a50f15", "#80b1d3", "#fdb462", "#e78ac3", "#9e9ac8", "#5ab220", "#ffffb3"])
-      d3.csv("data.csv", data => {
-
-        var res = data.map((d,i) => {
-          return {
-            date : parseDate(d.year),
-            bidding_no : d.bidding_no,
-            state : d.state,
-            rate : d.rate
-          }
-        })
-
-        var xScale = d3.scaleTime()
-          .domain(d3.extent(res, d=>d.date))
-          .range([0, width])
-
-
-        var yScale = d3.scaleLinear()
-          .domain([0, 21])
-          .range([height, 0]);
-
-        var svg = d3.select("#chart").append("svg")
-          .attr("width", "100%")
-          .attr("height", "100%")
-          .attr("viewBox", "20 20 " + 1600 + " " + 980)
-          .append('g')
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-
-        // CREATE AXES //
-        // render axis first before lines so that lines will overlay the horizontal ticks
-        var xAxis = d3.axisBottom(xScale).ticks(d3.timeYear.every(1)).tickSizeOuter(axisPad*2).tickSizeInner(axisPad*2)
-        var yAxis = d3.axisLeft(yScale).ticks(10, "s").tickSize(-width) //horizontal ticks across svg width
-
-        svg.append("g")
-          .attr("class", "x axis")
-          .attr("transform", `translate(0, ${height})`)
-          .call(xAxis)
-          .call(g => {
-            var years = xScale.ticks(d3.timeYear.every(1))
-            var xshift = (width/(years.length))/5 - 16
-            g.selectAll("text").attr("transform", `translate(${xshift}, 0)`) //shift tick labels to middle of interval
-              .style("text-anchor", "left")
-              .attr("y", axisPad+10)
-              .attr('fill', 'black')
-              .style("font-family", "Roboto")
-              .style("font-size", 15)
-              .style("font-weight", "bold")
-
-            g.selectAll("line")
-              .attr('stroke', 'black')
-
-            g.select(".domain")
-              .attr('stroke', 'black')
-
-          })
-
-
-
-        svg.append("g")
-          .attr("class", "y axis")
-          .call(yAxis)
-          .call(g => {
-            g.selectAll("text")
-            .style("text-anchor", "middle")
-            .attr("x", -axisPad*2)
-            .attr('fill', 'black')
-            .style("font-family", "Roboto")
-            .style("font-size", 15)
-
-
-
-            g.selectAll("line")
-              .attr('stroke', 'black')
-              .attr('stroke-width', 0.7) // make horizontal tick thinner and lighter so that line paths can stand out
-              .attr('opacity', 0.3)
-
-            g.select(".domain").remove()
-
-           })
-          .append('text')
-            .attr('x', 130)
-            .attr("y", 5)
-            .attr("fill", "black")
-            .text("Suicides per 100,000")
-            .style("font-family", "Roboto")
-            .style("font-size", "15px")
-
-
-        // CREATE LEGEND //
-        var svgLegend = svg.append('g')
-            .attr('class', 'gLegend')
-            .attr("transform", "translate(" + (width + 20) + "," + 0 + ")")
-
-        var legend = svgLegend.selectAll('.legend')
-          .data(category)
-          .enter().append('g')
-            .attr("class", "legend")
-            .attr("transform", function (d, i) {return "translate(0," + i * 25 + ")"})
-
-    svgLegend.append("rect")
-            .attr("width", 115)
-            .attr("height", 185)
-            .attr("x", -120)
-            .attr("y", 490)
-            .style("fill", "black")
-            .style("opacity", "0.1")
-
-
-        legend.append("circle")
-            .attr("class", "legend-node")
-            .attr("cx", -101)
-            .attr("cy", 508)
-            .attr("r", 8)
-            .style("fill", d=>color(d))
-            // .style("padding", "30px")
-
-        legend.append("text")
-            .attr("class", "legend-text")
-            .attr("x", -90)
-            .attr("y", 514)
-            .style("fill", "black")
-            .style("font-size", 15)
-            .style("font-family", "Roboto")
-            .text(d=>d)
-
-
-
-
-
-
-
-
-        // line generator
-        var line = d3.line()
-          .x(d => xScale(d.date))
-          .y(d => yScale(d.rate))
-
-        renderChart(1) // inital chart render (set default to Bidding Exercise 1 data)
-
-        function renderChart(bidding_no) {
-        //
-          var resNew = res.filter(d=>d.bidding_no == parseInt(bidding_no))
-        //
-
-          var res_nested = d3.nest() // necessary to nest data so that keys represent each state category
-            .key(d=>d.state)
-            .entries(resNew)
-
-          // APPEND MULTIPLE LINES //
-          var lines = svg.append('g')
-            .attr('class', 'lines')
-
-          glines = lines.selectAll('.line-group')
-            .data(res_nested).enter()
-            .append('g')
-            .attr('class', 'line-group')
-
-          glines
-            .append('path')
-              .attr('class', 'line')
-              .attr('d', d => line(d.values))
-              .style('stroke', (d, i) => color(i))
-              .style('fill', 'none')
-              .style('opacity', lineOpacity)
-              .style('stroke-width', lineStroke)
-
-
-          // APPEND CIRCLE MARKERS //
-          var gcircle = lines.selectAll("circle-group")
-            .data(res_nested).enter()
-            .append("g")
-            .attr('class', 'circle-group')
-
-          gcircle.selectAll("circle")
-            .data(d => d.values).enter()
-            .append("g")
-            .attr("class", "circle")
-            .append("circle")
-            .attr("cx", d => xScale(d.date))
-            .attr("cy", d => yScale(d.rate))
-            .attr("r", 2)
-
-          // CREATE HOVER TOOLTIP WITH VERTICAL LINE //
-          tooltip = d3.select("#chart").append("div")
-            .attr('id', 'tooltip')
-            .style('position', 'absolute')
-            .style("background-color", "Azure")
-            .style('padding', 4)
-            .style('display', 'none')
-
-          mouseG = svg.append("g")
-            .attr("class", "mouse-over-effects");
-
-          mouseG.append("path") // create vertical line to follow mouse
-            .attr("class", "mouse-line")
-            .style("stroke", "#636363")
-            .style("stroke-width", 1.5)
-            .style("opacity", "0");
-
-          var lines = document.getElementsByClassName('line');
-
-          var mousePerLine = mouseG.selectAll('.mouse-per-line')
-            .data(res_nested)
-            .enter()
-            .append("g")
-            .attr("class", "mouse-per-line");
-
-          mousePerLine.append("circle")
-            .attr("r", 3)
-            .style("stroke", function (d) {
-              return color(d.key)
-            })
-            .style("fill", "none")
-            .style("stroke-width", 2)
-            .style("opacity", "0");
-
-          mouseG.append('svg:rect') // append a rect to catch mouse movements on canvas
-            .attr('width', width)
-            .attr('height', height)
-            .attr('fill', 'none')
-            .attr('pointer-events', 'all')
-            .on('mouseout', function () { // on mouse out hide line, circles and text
-              d3.select(".mouse-line")
-                .style("opacity", "0");
-              d3.selectAll(".mouse-per-line circle")
-                .style("opacity", "0");
-              d3.selectAll(".mouse-per-line text")
-                .style("opacity", "0");
-              d3.selectAll("#tooltip")
-                .style('display', 'none')
-
-            })
-            .on('mouseover', function () { // on mouse in show line, circles and text
-              d3.select(".mouse-line")
-                .style("opacity", "1");
-              d3.selectAll(".mouse-per-line circle")
-                .style("opacity", "1");
-              d3.selectAll("#tooltip")
-                .style('display', 'block')
-            })
-            .on('mousemove', function () { // update tooltip content, line, circles and text when mouse moves
-              var mouse = d3.mouse(this)
-
-              d3.selectAll(".mouse-per-line")
-                .attr("transform", function (d, i) {
-                  var xDate = xScale.invert(mouse[0]) // use 'invert' to get date corresponding to distance from mouse position relative to svg
-                  var bisect = d3.bisector(function (d) { return d.date; }).left // retrieve row index of date on parsed csv
-                  var idx = bisect(d.values, xDate);
-
-                  d3.select(".mouse-line")
-                    .attr("d", function () {
-                      var data = "M" + xScale(d.values[idx].date) + "," + (height);
-                      data += " " + xScale(d.values[idx].date) + "," + 0;
-                      return data;
-                    });
-                  return "translate(" + xScale(d.values[idx].date) + "," + yScale(d.values[idx].rate) + ")";
-
-                });
-
-              updateTooltipContent(mouse, res_nested)
-
-            })
-          }
-
-      function updateTooltipContent(mouse, res_nested) {
-
-        sortingObj = []
-        res_nested.map(d => {
-          var xDate = xScale.invert(mouse[0])
-          var bisect = d3.bisector(function (d) { return d.date; }).left
-          var idx = bisect(d.values, xDate)
-          sortingObj.push({key: d.values[idx].state, rate: d.values[idx].rate, year: d.values[idx].date.getFullYear()})
-        })
-
-        sortingObj.sort(function(x, y){
-           return d3.descending(x.rate, y.rate);
-        })
-
-        var sortingArr = sortingObj.map(d=> d.key)
-
-        var res_nested1 = res_nested.slice().sort(function(a, b){
-          return sortingArr.indexOf(a.key) - sortingArr.indexOf(b.key) // rank vehicle category based on price of rate
-        })
-
-        tooltip.html(sortingObj[0].date)
-          .style('display', 'block')
-          .style('left', d3.event.pageX - 110)
-          .style('top', d3.event.pageY + 20)
-          .style('opacity', 0.8)
-          .selectAll()
-          .data(res_nested1).enter() // for each vehicle category, list out name and price of rate
-          .append('div')
-          .attr("class", "tooltiptext")
-          .style('color', "black")
-          .style('font-size', 14)
-          // .style('font-weight', "bold")
-          .style("font-family", "Roboto")
-          .html(d => {
-            var xDate = xScale.invert(mouse[0])
-            var bisect = d3.bisector(function (d) { return d.date; }).left
-            var idx = bisect(d.values, xDate)
-            return d.key + ": " + d.values[idx].rate.toString()
-          })
-      }
-
-    })
 
     var titleCard = "#titlecard";
     //The effect that will be applied to your page element. See https://daneden.github.io/animate.css/ for full list.
@@ -1282,7 +998,7 @@ p {
       var height = 700;
 
       // tooltip for mouseover functionality
-      var tooltip = floatingTooltip('tooltip', 240);
+      var tooltip1 = floatingTooltip('tooltip', 240);
 
 
       var ageCenters = {
@@ -1720,7 +1436,7 @@ p {
                       d.county
                       ;
 
-        tooltip.showTooltip(content, d3.event);
+        tooltip1.showTooltip(content, d3.event);
       }
 
       /*
@@ -1731,16 +1447,10 @@ p {
         d3.select(this)
           .attr('stroke', d3.rgb(fillColor(d.sex)).darker());
 
-        tooltip.hideTooltip();
+        tooltip1.hideTooltip();
       }
 
-      /*
-       * Externally accessible function (this is attached to the
-       * returned chart function). Allows the visualization to toggle
-       * between "single group" and "split by year" modes.
-       *
-       * displayName is expected to be a string and either 'year' or 'all'.
-       */
+
       chart.toggleDisplay = function (displayName) {
         if (displayName === 'year') {
           splitBubbles();
@@ -1833,27 +1543,15 @@ p {
       return x1 + x2;
     }
 
-    // Load the data.
-    // d3.csv('https://gist.githubusercontent.com/snphillips/92f33441701ebf0d74911ee502ad5f25/raw/9062a73469262854f5935a7858bc8c09be57bee1/gates_money.csv', display);
+
     d3.csv('suicide.csv', display);
 
-
-    // setup the buttons.
     setupButtons();
 
-
-    // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++==
-
-      /*
-     * Creates tooltip with provided id that
-     * floats on top of visualization.
-     * Most styling is expected to come from CSS
-     * so check out bubble_chart.css for more details.
-     */
     function floatingTooltip(tooltipId, width) {
       // Local variable to hold tooltip div for
       // manipulation in other functions.
-      var tt = d3.select('body')
+      var tt = d3.select('#bubble')
         .append('div')
         .attr('class', 'tooltip')
         .attr('id', tooltipId)
@@ -1867,13 +1565,7 @@ p {
       // Initially it is hidden.
       hideTooltip();
 
-      /*
-       * Display tooltip with provided content.
-       *
-       * content is expected to be HTML string.
-       *
-       * event is d3.event for positioning.
-       */
+
       function showTooltip(content, event) {
         tt.style('opacity', 0.9)
           .html(content);
@@ -1885,7 +1577,7 @@ p {
        * Hide the tooltip div.
        */
       function hideTooltip() {
-        tt.style('opacity', 0.0);
+        tt.style('opacity', 0);
       }
 
       /*
