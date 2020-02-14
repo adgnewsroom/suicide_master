@@ -62,6 +62,20 @@ padding-bottom: 5vh;
     width: 80%;
   }
 
+
+  .list-group-item {
+    background-color: #E8B1B1;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .list-group {
+    margin: auto;
+    width: 525px;
+    padding-bottom: 5vh;
+  }
+
+
     .year {
       font-size: 20px;
       fill: #636363;
@@ -151,8 +165,6 @@ padding-bottom: 5vh;
 
 .background {
   background-image: url("landing_page.jpg");
-  /* filter: blur(2px); */
-  /* filter: brightness(40%); */
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -210,6 +222,13 @@ h5 {
   padding-top: 30px
 }
 
+h7 {
+  font-family: 'Roboto', sans-serif;
+  font-size:1.3em;
+  color: black;
+  font-weight: 700;
+}
+
 p {
   max-width: 730px;
   margin: auto;
@@ -219,7 +238,7 @@ p {
   font-size: 1.3em;
 }
 
-p:first-of-type:first-letter {
+.dropcap:first-of-type p:first-of-type:first-letter {
     float: left;
     font-size: 65px;
     line-height: 1;
@@ -605,9 +624,10 @@ p {
 
 
 <div class="spacer" style="padding: 8vh"></div>
-<div class="animation" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="1000">
-<article>
-    <P>Kelsey Bell is alive; she’s happy a lot of the time.</p>
+<article data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="1000">
+  <div class="dropcap">
+    <p>Kelsey Bell is alive; she’s happy a lot of the time.</p>
+  </div>
 
     <p>The now-19-year-old attempted suicide when she was 13 after years of dealing with depression, anxiety and an eating disorder. She says her recovery has highs and lows, but she’s stable now —
     enough so that she is a junior board member with the American Foundation for Suicide Prevention and is majoring in psychology.</p>
@@ -624,7 +644,9 @@ p {
 
     <p>Twenty-one of the suicides examined by the newspaper were by girls, and 42 — about 66% — were by boys.</p>
 
-</div>
+    <p>Some reports listed histories of mental health problems or major life changes such as a breakup, death in the family or a sudden move. Others listed no such history.</p>
+
+    <p>The reports are incomplete, as shown when comparing the newspaper’s database with federal mortality data. Some coroners didn’t have records for every year requested because their predecessors had taken records home with them when they left office.</p>
 
     <div class="container1">
       <h4>Child suicides in Arkansas from 2012 to 2017</h4>
@@ -657,11 +679,6 @@ p {
 
     <div class="spacer" style="padding: 2vh"></div>
 
-
-    <p>Some reports listed histories of mental health problems or major life changes such as a breakup, death in the family or a sudden move. Others listed no such history.</p>
-
-    <p>The reports are incomplete, as shown when comparing the newspaper’s database with federal mortality data. Some coroners didn’t have records for every year requested because their predecessors had taken records home with them when they left office.</p>
-
     <p>Federal data show that 119 children died in Arkansas from 2012 to 2017, the most recent year for which data are available. Documents gathered by the newspaper show only 63 reports of suicide.</p>
 
     <p>Research shows that suicide is the second-leading reason for death in people ages 15 to 24. The numbers have increased as well for young children under the age of 10, according to the CDC.</p>
@@ -687,7 +704,9 @@ p {
 
     <h2 class="subhead" data-aos="zoom-out" data-aos-anchor-placement="top-center" data-aos-duration="500" data-aos-once="true"><span>"Really sad"</span></h2>
 
+    <div class="dropcap">
     <p>Kelsey was 9 when her mother, Ladeana Bell, first noticed mental health problems in her daughter. Ladeana drove to Kelsey’s elementary school and saw the other children running and playing. Kelsey, though, was lying on the ground, lethargic and trying to take a nap.</p>
+</div>
 
     <p>“This little girl is really sad,” Ladeana thought to herself.</p>
 
@@ -744,7 +763,11 @@ p {
 
     <h2 class="subhead" data-aos="zoom-out" data-aos-anchor-placement="top-center" data-aos-duration="500"  data-aos-once="true"><span>Death classification</span></h2>
 
+    <div class="dropcap">
+
     <p>Coroners are also more cognizant of the need to classify suicides as such, Lackey said. Lackey is also a deputy coroner in Lonoke County who helped to develop a training on investigating infant deaths for Arkansas coroners.</p>
+
+</div>
 
     <p>“A coroner has a pretty powerful position,” Lackey said.</p>
 
@@ -771,13 +794,35 @@ p {
 
   <h2 class="subhead" data-aos="zoom-out" data-aos-anchor-placement="top-center" data-aos-duration="500" data-aos-once="true"><span>"We all want the same outcome"</span></h2>
 
+  <div class="dropcap">
+
   <p>Reducing stigma is one of a few goals for Arkansas Students United for Mental Health, a cohort of high schoolers from Cabot High School. They aren’t an official school club and are extending their member base outside of their school district.</p>
+
+</div>
 
   <p>The group sprung up from an advanced placement government class assignment and grew from there, said Cabot senior Jayson Crumpler, a founding member and the group’s head.</p>
 
   <p>They plan to implement “localized educational programs” to teach other students about mental health and the available resources. They’re also advocating for legislation that would lower the age of consent for mental health issues from 18 to 16 and set aside funding for an on-campus therapist at every high school campus in the state.</p>
 
   <p>“I think we’ve succeeded in at least bringing the conversation to the table,” Crumpler said.</p>
+
+
+<ul class="list-group" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="500">
+  <li class="list-group-item" style="background-color: #D6D6D6"><h7>Warning signs of suicide</h7><div style="font-size: 1.0em">Experts recommend that parents or guardians have conversations with their children if they are exhibiting these signs:</div></li>
+  <li class="list-group-item">Increased alcohol and/or drug use</li>
+  <li class="list-group-item">Aggressive behavior</li>
+  <li class="list-group-item">Withdrawal from friends, family and community</li>
+  <li class="list-group-item">Dramatic mood swings</li>
+  <li class="list-group-item">Impulsive or reckless behavior</li>
+</ul>
+
+<ul class="list-group list-group-horizontal" data-aos="fade-left" data-aos-duration="1000" data-aos-offset="500">
+  <li class="list-group-item" style="background-color: #AEAEAE"><h7>Suicide prevention lifeline</h7></li>
+  <li class="list-group-item" style="background-color: #AEAEAE"><h7>(800)-273-TALK(8255)</h7></li>
+</ul>
+
+
+
 
   <p>Crumpler is working with Lackey and others at the Arkansas chapter of the National Alliance on Mental Illness on his project. The alliance is also pushing out fresh efforts to decrease suicides and inform the public on mental illness.</p>
 
