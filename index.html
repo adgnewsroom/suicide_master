@@ -264,8 +264,11 @@ p {
 
 
 #bubble {
+  align-items: center;
+  justify-content: center;
+  display: block;
   padding-top: 1vh;
-  padding-left: 35vw;
+  padding-left: 38vw;
 }
 
 
@@ -503,16 +506,15 @@ p {
 #vis {height: 50%;}
 
 #chart {height: 50%;}
+
+#bubble {
+  padding-left: 8%;
+}
 }
 
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 768px) {
-
-  #bubble {
-    padding-left: 8%;
-  }
-
 
   h1 {
     font-size: 3em;
@@ -1082,7 +1084,7 @@ p {
      */
     function bubbleChart() {
       // Constants for sizing
-      var width = 800;
+      var width = 500;
       var height = 400;
 
       // tooltip for mouseover functionality
@@ -1273,8 +1275,8 @@ p {
         // with desired size.
         svg = d3.select(selector)
           .append('svg')
-          .attr('width', "100%")
-          .attr('height', "60%")
+          .attr('width', "500")
+          .attr('height', "400")
           .attr('transform', "translate(0, -20)")
 
         // Bind nodes data to what will become DOM elements to represent them.
