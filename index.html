@@ -57,9 +57,8 @@ padding-bottom: 5vh;
 
 
   #toolbar {
-    padding-left: 12vw;
     margin: auto;
-    width: 80%;
+    width: 280px;
   }
 
 
@@ -652,7 +651,7 @@ p {
 
 
 <div class="spacer" style="padding: 8vh"></div>
-<article data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="1000">
+<article data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="800">
   <div class="dropcap">
     <p>Kelsey Bell is alive; she’s happy a lot of the time.</p>
   </div>
@@ -685,7 +684,7 @@ p {
         <a id="age_range" class="button">By age</a>
 
         <svg class="legend" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-        	 viewBox="0 0 50 33" style="enable-background:new 0 0 50 33; width: 80px; transform: translate(150px, 280px);" xml:space="preserve">
+        	 viewBox="0 0 50 33" style="enable-background:new 0 0 50 33; width: 70px; transform: translate(300px, -20px);" xml:space="preserve">
         <style type="text/css">
         	.st0{fill:#262626;}
         	.st1{fill:white;}
@@ -721,7 +720,7 @@ p {
 
     <div id="vis"></div>
 
-    <div class="captions"><p>Source: <a href="#" class="badge badge-secondary">National Alliance on Mental Illness</p></a></div>
+    <div class="captions"><p>Source: <a href="https://www.cdc.gov/" target="_blank" class="badge badge-secondary">Centers for Disease Control and Prevention</p></a></div>
 
     <!-- <h4>Suicides by minors, per 100,000 from 1999 to 2017</h4>
 
@@ -732,7 +731,7 @@ p {
 
 <article>
 
-    <h2 class="subhead" data-aos="zoom-out" data-aos-anchor-placement="top-center" data-aos-duration="500" data-aos-once="true"><span>"Really sad"</span></h2>
+    <h2 class="subhead" data-aos="zoom-out" data-aos-anchor-placement="top-center" data-aos-duration="300" data-aos-once="true"><span>"Really sad"</span></h2>
 
     <div class="dropcap">
     <p>Kelsey was 9 when her mother, Ladeana Bell, first noticed mental health problems in her daughter. Ladeana drove to Kelsey’s elementary school and saw the other children running and playing. Kelsey, though, was lying on the ground, lethargic and trying to take a nap.</p>
@@ -791,7 +790,7 @@ p {
 
 <article>
 
-    <h2 class="subhead" data-aos="zoom-out" data-aos-anchor-placement="top-center" data-aos-duration="500"  data-aos-once="true"><span>Death classification</span></h2>
+    <h2 class="subhead" data-aos="zoom-out" data-aos-anchor-placement="top-center" data-aos-duration="300"  data-aos-once="true"><span>Death classification</span></h2>
 
     <div class="dropcap">
 
@@ -822,7 +821,7 @@ p {
 
   <article>
 
-  <h2 class="subhead" data-aos="zoom-out" data-aos-anchor-placement="top-center" data-aos-duration="500" data-aos-once="true"><span>"We all want the same outcome"</span></h2>
+  <h2 class="subhead" data-aos="zoom-out" data-aos-anchor-placement="top-center" data-aos-duration="300" data-aos-once="true"><span>"We all want the same outcome"</span></h2>
 
   <div class="dropcap">
 
@@ -837,7 +836,7 @@ p {
   <p>“I think we’ve succeeded in at least bringing the conversation to the table,” Crumpler said.</p>
 
 
-<ul class="list-group" data-aos="fade-right" data-aos-duration="800" data-aos-offset="500" data-aos-once="true">
+<ul class="list-group" data-aos="fade-right" data-aos-duration="500" data-aos-offset="500" data-aos-once="true">
   <li class="list-group-item" style="background-color: #D6D6D6"><h7>Warning signs of suicide</h7><div style="font-size: 1.0em">Experts recommend that parents or guardians have conversations with their children if they are exhibiting these signs:</div></li>
   <li class="list-group-item">Increased alcohol and/or drug use</li>
   <li class="list-group-item">Aggressive behavior</li>
@@ -846,7 +845,7 @@ p {
   <li class="list-group-item">Impulsive or reckless behavior</li>
 </ul>
 
-<ul class="list-group list-group-horizontal" data-aos="fade-left" data-aos-duration="800" data-aos-offset="500" data-aos-once="true">
+<ul class="list-group list-group-horizontal" data-aos="fade-left" data-aos-duration="500" data-aos-offset="500" data-aos-once="true">
   <li class="list-group-item" style="background-color: #AEAEAE"><h7>Suicide prevention lifeline</h7></li>
   <li class="list-group-item" style="background-color: #AEAEAE"><h7>(800)-273-TALK(8255)</h7></li>
 </ul>
@@ -1033,6 +1032,7 @@ p {
 
     AOS.init();
 
+    AOS.refresh();
 
 
     var titleCard = "#titlecard";
@@ -1076,7 +1076,7 @@ p {
     function bubbleChart() {
       // Constants for sizing
       var width = 800;
-      var height = 700;
+      var height = 600;
 
       // tooltip for mouseover functionality
       var tooltip1 = floatingTooltip('tooltip', 240);
