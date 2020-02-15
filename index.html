@@ -48,7 +48,7 @@ padding-top: 5vh;
 
 #bubble svg{
   /* max-width: 500px; */
-  height: 240px;
+  height: 300px;
   margin: auto;
   width: 100%;
   /* padding-top: 5vh; */
@@ -1083,47 +1083,47 @@ p {
     function bubbleChart() {
       // Constants for sizing
       var width = 800;
-      var height = 600;
+      var height = 400;
 
       // tooltip for mouseover functionality
       var tooltip1 = floatingTooltip('tooltip', 240);
 
 
       var ageCenters = {
-        low: { x: 120, y: height },
-        medium: { x: 310, y: height },
-        high: { x: 450, y: height }
+        low: { x: 150, y: 150 },
+        medium: { x: 280, y: 150 },
+        high: { x: 380, y: 150 }
       };
 
       // X locations of the year titles.
       var agesTitleX = {
-        "0-5": 110,
-        "6-11": 280,
-        "12-18": 450,
+        "0-5": 120,
+        "6-11": 250,
+        "12-18": 380,
       };
 
 
       // Locations to move bubbles towards, depending
       // on which view mode is selected.
-      var center = { x: 290, y: height / 5 };
+      var center = { x: 290, y: 150 };
 
       var yearCenters = {
-        2012: { x: 70, y: height / 2 },
-        2013: { x: 150, y: height / 2 },
-        2014: { x: 240, y: height / 2 },
-        2015: { x: 340, y: height / 2 },
-        2016: { x: 440, y: height / 2 },
-        2017: { x: 530, y: height / 2 }
+        2012: { x: 70, y: 150 },
+        2013: { x: 140, y: 150 },
+        2014: { x: 220, y: 150 },
+        2015: { x: 300, y: 150 },
+        2016: { x: 400, y: 150 },
+        2017: { x: 480, y: 150 }
       };
 
       // X locations of the year titles.
       var yearsTitleX = {
         2012: 40,
-        2013: 140,
-        2014: 240,
-        2015: 340,
-        2016: 440,
-        2017: 540
+        2013: 130,
+        2014: 220,
+        2015: 310,
+        2016: 400,
+        2017: 490
       };
 
 
@@ -1465,7 +1465,7 @@ p {
         years.enter().append('text')
           .attr('class', 'year')
           .attr('x', function (d) { return yearsTitleX[d]; })
-          .attr('y', 20)
+          .attr('y', 40)
           .attr('text-anchor', 'middle')
           .text(function (d) { return d; })
       }
@@ -1481,7 +1481,7 @@ p {
         ages.enter().append('text')
           .attr('class', 'age_range')
           .attr('x', function (d) { return agesTitleX[d]; })
-          .attr('y', 20)
+          .attr('y', 40)
           .attr('text-anchor', 'middle')
           .text(function (d) { return d; });
       }
