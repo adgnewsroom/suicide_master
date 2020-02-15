@@ -509,9 +509,9 @@ p {
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 768px) {
 
-  /* #bubble {
-    padding-left: 10%;
-  } */
+  #bubble {
+    padding-left: 8%;
+  }
 
 
   h1 {
@@ -1090,40 +1090,40 @@ p {
 
 
       var ageCenters = {
-        low: { x: 150, y: 150 },
-        medium: { x: 280, y: 150 },
-        high: { x: 380, y: 150 }
+        low: { x: 130, y: 150 },
+        medium: { x: 260, y: 150 },
+        high: { x: 360, y: 150 }
       };
 
       // X locations of the year titles.
       var agesTitleX = {
-        "0-5": 120,
-        "6-11": 250,
-        "12-18": 380,
+        "0-5": 100,
+        "6-11": 230,
+        "12-18": 360,
       };
 
 
       // Locations to move bubbles towards, depending
       // on which view mode is selected.
-      var center = { x: 290, y: 150 };
+      var center = { x: 250, y: 150 };
 
       var yearCenters = {
         2012: { x: 70, y: 150 },
         2013: { x: 140, y: 150 },
-        2014: { x: 220, y: 150 },
-        2015: { x: 300, y: 150 },
-        2016: { x: 400, y: 150 },
-        2017: { x: 480, y: 150 }
+        2014: { x: 210, y: 150 },
+        2015: { x: 280, y: 150 },
+        2016: { x: 350, y: 150 },
+        2017: { x: 420, y: 150 }
       };
 
       // X locations of the year titles.
       var yearsTitleX = {
         2012: 40,
-        2013: 130,
-        2014: 220,
-        2015: 310,
-        2016: 400,
-        2017: 490
+        2013: 120,
+        2014: 200,
+        2015: 280,
+        2016: 360,
+        2017: 440
       };
 
 
@@ -1275,7 +1275,7 @@ p {
           .append('svg')
           .attr('width', "100%")
           .attr('height', "60%")
-          .attr('transform', "translate(-100, -20)")
+          .attr('transform', "translate(0, -20)")
 
         // Bind nodes data to what will become DOM elements to represent them.
         bubbles = svg.selectAll('.bubble')
