@@ -20,7 +20,6 @@ body {
 
 .container1 {
 padding-top: 5vh;
-padding-bottom: 5vh;
 }
 
 
@@ -49,8 +48,9 @@ padding-bottom: 5vh;
 
 #bubble svg{
   /* max-width: 500px; */
-  height: 300px;
-  /* clear: both; */
+  height: 240px;
+  margin: auto;
+  width: 100%;
   /* padding-top: 5vh; */
   /* margin-bottom: 10px; */
 }
@@ -76,7 +76,7 @@ padding-bottom: 5vh;
 
 
     .year {
-      font-size: 20px;
+      font-size: 18px;
       fill: #636363;
       padding: 3px;
       background-color: black;
@@ -85,22 +85,21 @@ padding-bottom: 5vh;
     }
 
     .age_range {
-      background-color: black;
+      font-size: 18px;
       border-radius: 5px;
       padding: 3px;
-      font-size: 20px;
       fill: #636363;
       cursor: default;
     }
 
-    .manner {
+    /* .manner {
       background-color: black;
       border-radius: 5px;
       padding: 3px;
       font-size: 18px;
       fill: #636363;
       cursor: default;
-    }
+    } */
 
     hr.divider {
     margin: 0.3em;
@@ -244,7 +243,7 @@ p {
   margin-bottom: 1em;
   font-family: 'Roboto', sans-serif;
   font-size: 1.0em;
-  padding-bottom: 10vh;
+  padding-bottom: 4vh;
 }
 
 .dropcap:first-of-type p:first-of-type:first-letter {
@@ -265,8 +264,6 @@ p {
 
 
 #bubble {
-  margin: auto;
-  display: block;
   padding-top: 1vh;
   padding-left: 35vw;
 }
@@ -499,22 +496,23 @@ p {
     width: 140px;
   }
 
+  .list-group {
+    width: 465px;
+  }
+
 #vis {height: 50%;}
 
 #chart {height: 50%;}
 }
 
 
-
-@media (max-width: 1580px) {
-
-#bubble {
-  padding-left: 18%;
-}
-}
-
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 768px) {
+
+  /* #bubble {
+    padding-left: 10%;
+  } */
+
 
   h1 {
     font-size: 3em;
@@ -527,7 +525,7 @@ p {
   }
 
   h2 {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 
   p {
@@ -570,6 +568,10 @@ h4 {
   font-size: 1.0em;
 }
 
+h2 {
+  font-size: 1.1em;
+}
+
 h5 {
   font-size: 1.0em;
 }
@@ -589,6 +591,20 @@ h5 {
     font-size: 2em;
     font-family: 'Gelasio', serif;
     text-align: center;
+  }
+
+  .list-group {
+    margin: auto;
+    width: 415px;
+    padding-bottom: 5vh;
+  }
+
+#bubble {
+  padding-left: 0
+}
+
+  h7 {
+    font-size: 1.0em;
   }
 
   h3 {
@@ -702,6 +718,7 @@ p {
       </div>
       <div id="bubble"></div>
     </div>
+    <div class="captions"><p>*Victims' names are withheld.</p></div>
 
     <div class="spacer" style="padding: 2vh"></div>
 
@@ -730,7 +747,7 @@ p {
 
 <article>
 
-    <h2 class="subhead" data-aos="zoom-out" data-aos-anchor-placement="top-center" data-aos-duration="300" data-aos-once="true"><span>"Really sad"</span></h2>
+    <h2 class="subhead" data-aos="zoom-out" data-aos-offset="100" data-aos-duration="500"><span>"Really sad"</span></h2>
 
     <div class="dropcap">
     <p>Kelsey was 9 when her mother, Ladeana Bell, first noticed mental health problems in her daughter. Ladeana drove to Kelsey’s elementary school and saw the other children running and playing. Kelsey, though, was lying on the ground, lethargic and trying to take a nap.</p>
@@ -789,7 +806,7 @@ p {
 
 <article>
 
-    <h2 class="subhead" data-aos="zoom-out" data-aos-anchor-placement="top-center" data-aos-duration="300"  data-aos-once="true"><span>Death classification</span></h2>
+    <h2 class="subhead" data-aos="zoom-out" data-aos-offset="100" data-aos-duration="500"><span>Death classification</span></h2>
 
     <div class="dropcap">
 
@@ -820,7 +837,7 @@ p {
 
   <article>
 
-  <h2 class="subhead" data-aos="zoom-out" data-aos-anchor-placement="top-center" data-aos-duration="300" data-aos-once="true"><span>"We all want the same outcome"</span></h2>
+  <h2 class="subhead" data-aos="zoom-out" data-aos-offset="100" data-aos-duration="500"><span>"We all want the same outcome"</span></h2>
 
   <div class="dropcap">
 
@@ -835,16 +852,16 @@ p {
   <p>“I think we’ve succeeded in at least bringing the conversation to the table,” Crumpler said.</p>
 
 
-<ul class="list-group" data-aos="fade-right" data-aos-duration="500" data-aos-offset="500" data-aos-once="true">
+<ul class="list-group" data-aos="fade-right" data-aos-offset="100" data-aos-duration="800">
   <li class="list-group-item" style="background-color: #D6D6D6"><h7>Warning signs of suicide</h7><div style="font-size: 1.0em">Experts recommend that parents or guardians have conversations with their children if they are exhibiting these signs:</div></li>
-  <li class="list-group-item">Increased alcohol and/or drug use</li>
-  <li class="list-group-item">Aggressive behavior</li>
-  <li class="list-group-item">Withdrawal from friends, family and community</li>
-  <li class="list-group-item">Dramatic mood swings</li>
-  <li class="list-group-item">Impulsive or reckless behavior</li>
+  <li class="list-group-item">&lowast;Increased alcohol and/or drug use</li>
+  <li class="list-group-item">&lowast;Aggressive behavior</li>
+  <li class="list-group-item">&lowast;Withdrawal from friends, family and community</li>
+  <li class="list-group-item">&lowast;Dramatic mood swings</li>
+  <li class="list-group-item">&lowast;Impulsive or reckless behavior</li>
 </ul>
 
-<ul class="list-group list-group-horizontal" data-aos="fade-left" data-aos-duration="500" data-aos-offset="500" data-aos-once="true">
+<ul class="list-group list-group-horizontal" data-aos="fade-left" data-aos-offset="100" data-aos-duration="800">
   <li class="list-group-item" style="background-color: #AEAEAE"><h7>Suicide prevention lifeline</h7></li>
   <li class="list-group-item" style="background-color: #AEAEAE"><h7>(800)-273-TALK(8255)</h7></li>
 </ul>
@@ -875,13 +892,7 @@ p {
 
 </article>
 
-
-
-
-
-
   <div class="spacer" style="padding: 10vh"></div>
-
 
   <!-- Footer -->
 <footer class="page-footer font-small unique-color-dark" style="background-color: #383838">
@@ -1020,10 +1031,7 @@ p {
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="map.js"></script>
     <!-- <script src="linechart.js"></script> -->
-
     <!-- <script src="bubble.js"></script> -->
-
-
 
 
     <script>
@@ -1082,40 +1090,40 @@ p {
 
 
       var ageCenters = {
-        low: { x: width / 3, y: height },
-        medium: { x: width / 2, y: height },
-        high: { x: 2 * width / 3, y: height }
+        low: { x: 120, y: height },
+        medium: { x: 310, y: height },
+        high: { x: 450, y: height }
       };
 
       // X locations of the year titles.
       var agesTitleX = {
-        "0-5": 230,
-        "6-11": width - 450,
-        "12-18": width - 280,
+        "0-5": 110,
+        "6-11": 280,
+        "12-18": 450,
       };
 
 
       // Locations to move bubbles towards, depending
       // on which view mode is selected.
-      var center = { x: width / 2, y: height / 5 };
+      var center = { x: 290, y: height / 5 };
 
       var yearCenters = {
-        2012: { x: width / 6 - 50, y: height / 2 },
-        2013: { x: width / 3 - 50, y: height / 2 },
-        2014: { x: width / 2 - 50, y: height / 2 },
-        2015: { x: 1.9 * width / 3 - 50, y: height / 2 },
-        2016: { x: 2.4 * width / 3 - 50, y: height / 2 },
-        2017: { x: 2.7 * width / 3 - 10, y: height / 2 }
+        2012: { x: 70, y: height / 2 },
+        2013: { x: 150, y: height / 2 },
+        2014: { x: 240, y: height / 2 },
+        2015: { x: 340, y: height / 2 },
+        2016: { x: 440, y: height / 2 },
+        2017: { x: 530, y: height / 2 }
       };
 
       // X locations of the year titles.
       var yearsTitleX = {
-        2012: 50,
-        2013: width - 600,
-        2014: width - 460,
-        2015: width - 340,
-        2016: width - 200,
-        2017: width - 80
+        2012: 40,
+        2013: 140,
+        2014: 240,
+        2015: 340,
+        2016: 440,
+        2017: 540
       };
 
 
@@ -1267,7 +1275,7 @@ p {
           .append('svg')
           .attr('width', "100%")
           .attr('height', "60%")
-          // .attr('viewBox', "200 20 300 300");
+          .attr('transform', "translate(-100, -20)")
 
         // Bind nodes data to what will become DOM elements to represent them.
         bubbles = svg.selectAll('.bubble')
@@ -1503,9 +1511,10 @@ p {
         // change outline to indicate hover state.
         d3.select(this).attr('stroke', 'black');
 
-        var content = '<span class="name">' +
-                      d.name + '</span><br/>' + ' </span><span class="dob">' + d.dob + ' - ' + d.dod +
-                      '</span><br/>' +
+        var content =
+        // '<span class="name">' +
+        //               d.name + '</span><br/>' + ' </span><span class="dob">' + d.dob + ' - ' + d.dod +
+        //               '</span><br/>' +
 
                       '<span class="category">Age: </span><span class="value">' +
                       d.age +
