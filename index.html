@@ -39,14 +39,14 @@ padding-top: 5vh;
   color: #444; /* rgba not supported (IE 8) */
   color: rgba(0, 0, 0, 0.80); /* rgba supported */
   border: 1px solid #999;  /*IE 6/7/8*/
-  border: none rgba(0, 0, 0, 0);  /*IE9 + everything else*/
+   /*IE9 + everything else*/
   background-color: white;
   text-decoration: none;
   border-radius: 2px;
 }
 
 .button.active {
-  background: dimgrey;
+  background: #383838;
   color: #fff;
 }
 
@@ -81,7 +81,7 @@ padding-top: 5vh;
 
     .year {
       font-size: 18px;
-      fill: #636363;
+      fill: black;
       padding: 3px;
       background-color: black;
       border-radius: 5px;
@@ -92,7 +92,7 @@ padding-top: 5vh;
       font-size: 18px;
       border-radius: 5px;
       padding: 3px;
-      fill: #636363;
+      fill: black;
       cursor: default;
     }
 
@@ -167,7 +167,7 @@ padding-top: 5vh;
 
 .background {
   background-image: linear-gradient(to bottom, transparent, 80%, black),
-                    url("landing_page_original.jpg");
+                    url("landing_page.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -213,7 +213,12 @@ h3 {
 }
 
 h4 {
+  /* color: #d1d1d1; */
   font-size: 1.8em;
+  /* text-shadow: 1px 1px 1px #000; */
+
+  /* -webkit-text-stroke-width: 0.3px;
+  -webkit-text-stroke-color: white; */
   text-align: center;
   padding-top: 30px
 }
@@ -247,7 +252,7 @@ p {
   padding: 0 15px;
   margin-bottom: 1em;
   font-family: 'Roboto', sans-serif;
-  font-size: 1.0em;
+  font-size: 1.1em;
   padding-bottom: 4vh;
 }
 
@@ -516,6 +521,19 @@ color: White
   padding-bottom: 100px;
 }
 
+@media (min-width: 1980px) {
+
+#bubble {
+  padding-left: 40%;
+}
+}
+
+
+@media screen and (max-width: 1980px) and (min-width: 992px) {
+  #bubble {
+    padding-left: 30%;
+  }
+}
 
 @media (max-width: 992px) {
 
@@ -715,7 +733,8 @@ p {
     <p>Twenty-one of the suicides examined by the newspaper were by girls, and 42 — about 66% — were by boys.</p>
 </div>
     <div class="container1">
-      <h4>Suicides by minors in Arkansas from 2012 to 2017</h4>
+
+      <h4 style="color: #e6e6e6; text-shadow: 2px 2px 8px #000000;">Suicides by minors in Arkansas from 2012 to 2017</h4>
       <div id="toolbar">
         <a id="all" class="button active">All deaths</a>
         <!-- <a id="manner" class="button">By manner</a> -->
