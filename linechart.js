@@ -15,11 +15,11 @@
       var axisPad = 7 // axis formatting
       var R = 6 //legend marker
 
-      var category = ["Arkansas", "Texas", "Tennessee", "Oklahoma", "Missouri", "Mississippi", "Louisiana"]
+      var category = ["Arkansas", "Texas", "Tennessee", "Oklahoma", "Missouri", "Louisiana"]
 
       var color = d3.scaleOrdinal()
         .domain(category)
-        .range(["#a50f15", "#80b1d3", "#fdb462", "#e78ac3", "#9e9ac8", "#5ab220", "#ffffb3"])
+        .range(["#a50f15", "#80b1d3", "#fdb462", "#e78ac3", "#9e9ac8", "#ffffb3"])
       d3.csv("data.csv", data => {
 
         var res = data.map((d,i) => {
