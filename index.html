@@ -60,6 +60,16 @@ padding-top: 5vh;
 }
 
 
+#chart svg{
+  /* max-width: 500px; */
+  /* height: 300px; */
+  margin: auto;
+  height: 90%;
+  /* padding-top: 5vh; */
+  /* margin-bottom: 10px; */
+}
+
+
   #toolbar {
     margin: auto;
     width: 280px;
@@ -781,18 +791,22 @@ p {
 
     <p>“One suicide is too many suicides,” said Mary Meacham, the chair of education and prevention for the Arkansas chapter of the American Foundation for Suicide Prevention.</p>
 
-    <h4>Suicides by minors, per 100,000 from 2012 to 2017</h4>
+    <!-- <h4>Suicides by minors, per 100,000 from 2012 to 2017</h4> -->
 
-    <div id="vis"></div>
+    <!-- <div id="vis"></div>
 
-    <div class="captions"><p>Source: <a href="https://www.cdc.gov/" target="_blank" class="badge badge-secondary">Centers for Disease Control and Prevention</p></a></div>
+    <div class="captions"><p>Source: <a href="https://www.cdc.gov/" target="_blank" class="badge badge-secondary">Centers for Disease Control and Prevention</p></a></div> -->
 
-    <!-- <h4>Suicides by minors, per 100,000 from 1999 to 2017</h4>
+    <h4>Suicides by minors, per 100,000 from 1999 to 2017</h4>
 
-    <div id="chart"></div> -->
+    <div class="captions"><p><br>Source: <a href="https://www.cdc.gov/" target="_blank" class="badge badge-secondary">Centers for Disease Control and Prevention</p></a></div>
+
+    <div id="chart"></div>
+
+
 
 </article>
-    <div class="spacer" style="padding: 7vh"></div>
+    <div class="spacer" style="padding: 3vh"></div>
 
 <article>
 
@@ -1078,7 +1092,7 @@ p {
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="map.js"></script>
-    <!-- <script src="linechart.js"></script> -->
+    <script src="linechart.js"></script>
     <!-- <script src="bubble.js"></script> -->
 
 
