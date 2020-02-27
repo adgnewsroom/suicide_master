@@ -37,7 +37,7 @@
 
 
         var yScale = d3.scaleLinear()
-          .domain([0, 21])
+          .domain([0, 4.7])
           .range([height, 0]);
 
         var svg = d3.select("#chart").append("svg")
