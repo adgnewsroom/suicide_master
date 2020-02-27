@@ -18,6 +18,10 @@ body {
  overflow-y:scroll;
 }
 
+html {
+  height: 100%;
+}
+
 .container1 {
 padding-top: 5vh;
 }
@@ -162,7 +166,8 @@ padding-top: 5vh;
 }
 
 .background {
-  background-image: url("landing_page.jpg");
+  background-image: linear-gradient(to bottom, transparent, 80%, black),
+                    url("landing_page_original.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -252,6 +257,26 @@ p {
     line-height: 1;
     font-weight: bold;
     margin-right: 9px;
+}
+
+#topper{
+  background-color: black
+}
+
+.intro {
+  /* background: black; */
+background: -webkit-gradient(linear, 100% 100%, 100% 100%, from(black), 80%, to(transparent));
+background: -webkit-linear-gradient(top, black, transparent);
+background: -moz-linear-gradient(top, black, transparent);
+background: -ms-linear-gradient(top, black, transparent);
+background: -o-linear-gradient(top, black, transparent);
+background: linear-gradient(top, black, 80%, transparent);
+/* background: linear-gradient(black, 80%, transparent) no-repeat; */
+}
+
+
+.intro p{
+color: White
 }
 
 #vis {
@@ -666,8 +691,8 @@ p {
   </section>
 
 
-
-<div class="spacer" style="padding: 8vh"></div>
+<div class="spacer" style="padding: 8vh; background: black"></div>
+<div class="intro">
 <article data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="800">
   <div class="dropcap">
     <p>Kelsey Bell is alive; she’s happy a lot of the time.</p>
@@ -691,6 +716,7 @@ p {
     <p>Some reports listed histories of mental health problems or major life changes such as a breakup, death in the family or a sudden move. Others listed no such history.</p>
 
     <p>The reports are incomplete, as shown when comparing the newspaper’s database with federal mortality data. Some coroners didn’t have records for every year requested because their predecessors had taken records home with them when they left office.</p>
+
 
     <div class="container1">
       <h4>Suicides by minors in Arkansas from 2012 to 2017</h4>
@@ -720,6 +746,8 @@ p {
       </div>
       <div id="bubble"></div>
     </div>
+  </div>
+
     <div class="captions"><p>*Victims' names are withheld.</p></div>
 
     <div class="spacer" style="padding: 2vh"></div>
@@ -1055,22 +1083,25 @@ p {
     });
 
 
-    $(function() {
+    // $(function() {
+    //
+    //     var documentEl = $(document),
+    //         fadeElem = $('#topper');
+    //
+    //     documentEl.on('scroll', function() {
+    //         var currScrollPos = documentEl.scrollTop();
+    //
+    //
+    //         fadeElem.each(function() {
+    //             var $this = $(this),
+    //                 elemOffsetTop = $this.offset().top;
+    //             if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos-elemOffsetTop)/800);
+    //         });
+    //     });
+    // });
 
-        var documentEl = $(document),
-            fadeElem = $('#topper');
-
-        documentEl.on('scroll', function() {
-            var currScrollPos = documentEl.scrollTop();
 
 
-            fadeElem.each(function() {
-                var $this = $(this),
-                    elemOffsetTop = $this.offset().top;
-                if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos-elemOffsetTop)/800);
-            });
-        });
-    });
 
 
 
