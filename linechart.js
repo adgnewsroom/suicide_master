@@ -19,7 +19,7 @@
 
       var color = d3.scaleOrdinal()
         .domain(category)
-        .range(["DarkRed", "#7fc97f", "MediumPurple", "#386cb0", "DarkSeaGreen", "RosyBrown"])
+        .range(["FireBrick", "#66c2a5", "#fc8d62", "#8da0cb", "#e78ac3", "DarkKhaki"])
       d3.csv("data.csv", data => {
 
         var res = data.map((d,i) => {
@@ -121,7 +121,7 @@
 
     svgLegend.append("rect")
             .attr("width", 115)
-            .attr("height", 185)
+            .attr("height", 160)
             .attr("x", -120)
             .attr("y", 490)
             .style("fill", "black")
