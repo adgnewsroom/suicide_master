@@ -10,16 +10,16 @@
       var height = 800 - margin.top - margin.bottom
 
       var lineOpacity = 1
-      var lineStroke = "4px"
+      var lineStroke = "5px"
 
       var axisPad = 7 // axis formatting
       var R = 6 //legend marker
 
-      var category = ["Arkansas", "Texas", "Tennessee", "Oklahoma", "Missouri", "Louisiana"]
+      var category = ["Arkansas", "Louisiana", "Missouri", "Oklahoma", "Tennessee", "Texas"]
 
       var color = d3.scaleOrdinal()
         .domain(category)
-        .range(["#a50f15", "#80b1d3", "#fdb462", "#e78ac3", "#9e9ac8", "#ffffb3"])
+        .range(["DarkRed", "#7fc97f", "MediumPurple", "#386cb0", "DarkSeaGreen", "RosyBrown"])
       d3.csv("data.csv", data => {
 
         var res = data.map((d,i) => {
@@ -59,13 +59,13 @@
           .call(xAxis)
           .call(g => {
             var years = xScale.ticks(d3.timeYear.every(1))
-            var xshift = (width/(years.length))/5 - 16
+            var xshift = (width/(years.length))/5 - 30
             g.selectAll("text").attr("transform", `translate(${xshift}, 0)`) //shift tick labels to middle of interval
               .style("text-anchor", "left")
-              .attr("y", axisPad+10)
+              .attr("y", axisPad + 15)
               .attr('fill', 'black')
               .style("font-family", "Roboto")
-              .style("font-size", 15)
+              .style("font-size", 14)
               .style("font-weight", "bold")
 
             g.selectAll("line")
@@ -209,7 +209,7 @@
 
           mouseG.append("path") // create vertical line to follow mouse
             .attr("class", "mouse-line")
-            .style("stroke", "#636363")
+            .style("stroke", "#808080")
             .style("stroke-width", 1.5)
             .style("opacity", "0");
 
