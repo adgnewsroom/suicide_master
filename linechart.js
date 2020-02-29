@@ -19,7 +19,7 @@
 
       var color = d3.scaleOrdinal()
         .domain(category)
-        .range(["FireBrick", "#66c2a5", "#fc8d62", "#8da0cb", "#e78ac3", "DarkKhaki"])
+        .range(["#9D2235", "#461D7C", "#F1B82D", "#004B87", "#58595B", "#BF5700"])
       d3.csv("data.csv", data => {
 
         var res = data.map((d,i) => {
